@@ -1,0 +1,14 @@
+.nav-item-container-wrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(10vh,min-content);
+    border-bottom: 2px solid black;
+    position: relative;
+    box-sizing: border-box;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+.item-date{
+    position: absolute;
+    right: 1rem;top: 15%;
+}

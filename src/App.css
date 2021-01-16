@@ -118,7 +118,9 @@ html {
 .blue {
   color: blue;
 }
-
+.mute-txt{
+  color: lightgray;
+}
 .bg-dark {
   background-color: black;
 }

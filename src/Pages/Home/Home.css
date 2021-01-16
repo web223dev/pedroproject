@@ -5,16 +5,15 @@
     box-sizing: border-box;
     padding-left: 1rem;
     padding-right: 1rem;
-    /* padding-top: 1%; */
     grid-template-areas: ". home-container ."
     ". home-container2 ."
     ". home-container3 .";
 }
 .home-container{
     grid-area: home-container;
-    background-color: lightgray;
+    /* background-color: lightgray; */
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 30% 70%;
     grid-template-rows: 20vh minmax(80vh,min-content);
     grid-template-areas: "header header"
                          "left-nav projectsContent";
@@ -22,20 +21,29 @@
 .header{
     grid-area: header;
     width: 100%;height: 100%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
     position: sticky;
     top: 0;
     box-sizing: border-box;
 }
 .left-nav{
     grid-area: left-nav;
-    height: 100%;width: 25%;
+    height: 100%;width: 30%;
     border-right: 1px solid black;
     position: fixed;
     top: 20vh;
-    overflow-y: scroll;
+    /* overflow-y: auto; */
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 75% 5%;
+}
+.left-nav-items{
+    overflow-y: auto;
+}
+.left-nav-footer{
+    display: flex;
+    align-items: center;
 }
 .projectsContent{
     grid-area: projectsContent;
