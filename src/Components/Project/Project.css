@@ -1,0 +1,28 @@
+.project-container-wrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(80vh,min-content);
+}
+.project-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10vh minmax(100vh,min-content);
+    grid-template-areas: "project-container-headings project-container-headings"
+                        "project-container-content project-container-content";
+}
+.project-container-headings{
+    grid-area: project-container-headings;
+    position: sticky;
+    top: 10vh;
+    z-index: 3;
+    display: flex;
+}
+.project-heading{
+    flex: 2;
+}
+.project-date{
+    flex: 1;
+}
+.project-container-content{
+    grid-area: project-container-content;
+}

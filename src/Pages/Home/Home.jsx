@@ -3,6 +3,7 @@ import "./Home.css";
 import ScrollableSection, { ScrollableLink } from "react-update-url-on-scroll";
 import Header from "../../Components/Header/Header";
 import NavItem from "../../Components/NavItem/NavItem";
+import Project from "../../Components/Project/Project";
 function Home() {
   return (
     <div className="home-wrapper-container">
@@ -13,35 +14,23 @@ function Home() {
           </div>
           <div className="left-nav">
             <div className="left-nav-items">
-            <NavItem/><NavItem/><NavItem/><NavItem/><NavItem/><NavItem/><NavItem/><NavItem/><NavItem/><NavItem/>
+              <NavItem />
+              <NavItem />
+              <NavItem />
+              <NavItem />
+              <NavItem />
+              <NavItem />
+              <NavItem />
+              <NavItem />
+              <NavItem />
+              <NavItem />
             </div>
             <div className="left-nav-footer">
               <h1 className="mute-txt f1-5">Contact me IG</h1>
             </div>
           </div>
           <div className="projectsContent">
-            <h1 className="test" style={{ zIndex: "3" }}>
-              Content
-            </h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
-            <h1 style={{ zIndex: "1" }}>Content</h1>
+            <Project />
           </div>
         </div>
       </ScrollableSection>

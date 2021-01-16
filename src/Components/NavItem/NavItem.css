@@ -7,6 +7,10 @@
     box-sizing: border-box;
     padding-right: 1rem;
     padding-bottom: 1rem;
+    /* color: gray; */
+}
+.nav-item-container-wrapper:hover{
+    color: gray;
 }
 .item-date{
     position: absolute;

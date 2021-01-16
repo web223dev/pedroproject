@@ -2,7 +2,7 @@ import React from "react";
 import "./NavItem.css";
 function NavItem() {
   return (
-    <div className="nav-item-container-wrapper flex-col">
+    <div className="nav-item-container-wrapper flex-col pointer">
       <h2>Érik, garagiste</h2>
       <p className="1rem">
         Le garage a ouvert en mars 2018. J’ai réussi à me salarier en août. Les

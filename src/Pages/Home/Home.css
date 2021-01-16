@@ -40,6 +40,10 @@
 }
 .left-nav-items{
     overflow-y: auto;
+    color: gray;
+}
+.left-nav-items:hover{
+    color: black;
 }
 .left-nav-footer{
     display: flex;
