@@ -1,9 +1,11 @@
 .home-wrapper-container{
     display: grid;
     grid-template-columns: minmax(0rem,1fr) minmax(min-content,1860px) minmax(0rem,1fr);
-    grid-template-rows: 100vh 100vh 100vh;
+    grid-template-rows: minmax(100vh,min-content);
     box-sizing: border-box;
-    padding: 1rem 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* padding-top: 1%; */
     grid-template-areas: ". home-container ."
     ". home-container2 ."
     ". home-container3 .";
@@ -11,6 +13,38 @@
 .home-container{
     grid-area: home-container;
     background-color: lightgray;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 20vh minmax(80vh,min-content);
+    grid-template-areas: "header header"
+                         "left-nav projectsContent";
+}
+.header{
+    grid-area: header;
+    width: 100%;height: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+}
+.left-nav{
+    grid-area: left-nav;
+    height: 100%;width: 25%;
+    border-right: 1px solid black;
+    position: fixed;
+    top: 20vh;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+.projectsContent{
+    grid-area: projectsContent;
+    box-sizing: border-box;
+    padding-left: 5%;
+}
+.test{
+    position: sticky;
+    top: 14vh;
 }
 .home-container2{
     grid-area: home-container2;
