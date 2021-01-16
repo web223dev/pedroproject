@@ -5,10 +5,10 @@
 }
 .project-container{
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 10vh minmax(100vh,min-content);
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 10vh minmax(70vh,min-content);
     grid-template-areas: "project-container-headings project-container-headings"
-                        "project-container-content project-container-content";
+                        "project-container-content-left project-container-content-right";
 }
 .project-container-headings{
     grid-area: project-container-headings;
@@ -16,6 +16,7 @@
     top: 10vh;
     z-index: 3;
     display: flex;
+    /* background-color: red; */
 }
 .project-heading{
     flex: 2;
@@ -23,6 +24,25 @@
 .project-date{
     flex: 1;
 }
-.project-container-content{
-    grid-area: project-container-content;
+.project-container-content-left{
+    grid-area: project-container-content-left;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50vh minmax(80vh,min-content);
+}
+.project-container-content-left-img{
+    /* background-color: white; */
+}
+.project-container-content-left-content{
+    box-sizing: border-box;
+    padding-top: 2rem;
+    text-align: left;
+    font-size: 1.4rem;
+}
+.project-container-content-right{
+    grid-area: project-container-content-right;
+    /* display: flex; */
+    /* flex-flow: column; */
+    /* align-items: flex-end; */
+    text-align: end;
 }

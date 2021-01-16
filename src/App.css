@@ -13,7 +13,9 @@ body {
 html {
   font-size: 62.5%;
 }
-
+.w100h100{
+  height: 100%;width: 100%;
+}
 .flex {
   display: flex;
   justify-content: center;
