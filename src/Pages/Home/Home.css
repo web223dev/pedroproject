@@ -1,10 +1,22 @@
 .home-wrapper-container{
     display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 100vh;
+    grid-template-columns: minmax(0rem,1fr) minmax(min-content,1860px) minmax(0rem,1fr);
+    grid-template-rows: 100vh 100vh 100vh;
     box-sizing: border-box;
+    padding: 1rem 1rem;
+    grid-template-areas: ". home-container ."
+    ". home-container2 ."
+    ". home-container3 .";
 }
 .home-container{
-    margin: 1%;
+    grid-area: home-container;
+    background-color: lightgray;
+}
+.home-container2{
+    grid-area: home-container2;
+    background-color: lightgray;
+}
+.home-container3{
+    grid-area: home-container3;
     background-color: lightgray;
 }
