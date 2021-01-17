@@ -13,7 +13,7 @@ function NavItem(props) {
         }}
       >
         <h2>{props.projectName}</h2>
-        <p className="1rem">
+        <p className="f1">
           Le garage a ouvert en mars 2018. J’ai réussi à me salarier en août.
           Les gens réparent eux-mêmes leur véhicule et je les accompagne. Ce
           n’est pas pas une activité très rentable Le garage a ouvert en mars
