@@ -1,17 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Home.css";
 // import ScrollableSection, { ScrollableLink } from "react-update-url-on-scroll";
 import Header from "../../Components/Header/Header";
 import NavItem from "../../Components/NavItem/NavItem";
 import Project from "../../Components/Project/Project";
-function Home(props) {
-  useEffect(() => {
-    // effect
-    console.log(props.history)
-    return () => {
-      // cleanup
-    }
-  }, [])
+function Home() {
   return (
     <div className="home-wrapper-container">
       {/* <ScrollableSection name={"project1"}> */}
@@ -21,41 +14,24 @@ function Home(props) {
           </div>
           <div className="left-nav">
             <div className="left-nav-items">
-              <NavItem />
-              <NavItem />
-              <NavItem />
-              <NavItem />
-              <NavItem />
-              <NavItem />
-              <NavItem />
-              <NavItem />
-              <NavItem />
-              <NavItem />
+              <NavItem projectName={"Project1"}/>
+              <NavItem projectName={"Project2"}/>
+              <NavItem projectName={"Project3"}/>
+              <NavItem projectName={"Project4"}/>
+              <NavItem projectName={"Project5"}/>
             </div>
             <div className="left-nav-footer">
               <h1 className="mute-txt f1-5">Contact me IG</h1>
             </div>
           </div>
-          <div className="projectsContent" onClick={()=>{console.log(props.history)}}>
-            <Project urlName={"project1"} projectName={"Project1"}/>
-            <Project urlName={"project2"} projectName={"Project2"}/>
-            <Project urlName={"project3"} projectName={"Project3"}/>
-            <Project urlName={"project4"} projectName={"Project4"}/>
-            <Project urlName={"project5"} projectName={"Project5"}/>
+          <div className="projectsContent" >
+            <Project urlName={"Project1"} projectName={"Project1"}/>
+            <Project urlName={"Project2"} projectName={"Project2"}/>
+            <Project urlName={"Project3"} projectName={"Project3"}/>
+            <Project urlName={"Project4"} projectName={"Project4"}/>
+            <Project urlName={"Project5"} projectName={"Project5"}/>
           </div>
         </div>
-      {/* </ScrollableSection> */}
-      {/* <ScrollableSection name={"project2"}>
-        <div className="home-container2">
-          <h1>Project2-Home</h1>
-        </div>
-      </ScrollableSection>
-      <ScrollableSection name={"project3"}>
-        <div className="home-container3">
-          <h1>Project3-Home</h1>
-        </div>
-      </ScrollableSection>
-     */}
     </div>
   );
 }
