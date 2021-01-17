@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 // import ScrollableSection, { ScrollableLink } from "react-update-url-on-scroll";
 import Header from "../../Components/Header/Header";
 import NavItem from "../../Components/NavItem/NavItem";
 import Project from "../../Components/Project/Project";
-function Home() {
+function Home(props) {
+  const [currentUrl, setcurrentUrl] = useState('/')
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => {
+      // cleanup
+    }
+  }, [])
+  const listenScrollEvent=()=>{
+    // console.log(window.location.pathname)
+    setcurrentUrl((prevState)=>window.location.pathname)
+  }
   return (
     <div className="home-wrapper-container">
       {/* <ScrollableSection name={"project1"}> */}
@@ -14,11 +25,11 @@ function Home() {
           </div>
           <div className="left-nav">
             <div className="left-nav-items">
-              <NavItem projectName={"Project1"}/>
-              <NavItem projectName={"Project2"}/>
-              <NavItem projectName={"Project3"}/>
-              <NavItem projectName={"Project4"}/>
-              <NavItem projectName={"Project5"}/>
+              <NavItem currentUrl={currentUrl} projectName={"Project1"}/>
+              <NavItem currentUrl={currentUrl} projectName={"Project2"}/>
+              <NavItem currentUrl={currentUrl} projectName={"Project3"}/>
+              <NavItem currentUrl={currentUrl} projectName={"Project4"}/>
+              <NavItem currentUrl={currentUrl} projectName={"Project5"}/>
             </div>
             <div className="left-nav-footer">
               <h1 className="mute-txt f1-5">Contact me IG</h1>

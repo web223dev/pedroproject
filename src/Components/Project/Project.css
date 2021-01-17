@@ -17,6 +17,7 @@
     grid-area: project-container-headings;
     position: sticky;
     top: 10vh;
+    /* top: 10vh; */
     z-index: 3;
     display: flex;
     /* background-color: red; */
@@ -64,7 +65,9 @@
     line-height: 23px;
 }
 
-
+.is-pinned {
+    color: red;
+  }
 /* Responsiveness */
 @media screen and (max-width: 1200px) {
     .project-container {

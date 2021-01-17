@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Project.css";
 import sstatic from "./Assets/sstatic.PNG";
 import ScrollableSection, { ScrollableLink } from "react-update-url-on-scroll";
 
 function Project(props) {
+  const [headingColor, setheadingColor] = useState("red");
+  useEffect(() => {
+    // console.log(window.location)
+    // const observer = new IntersectionObserver(
+    //   ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 10),
+    //   { threshold: [1] }
+    // );
+
+    // observer.observe(projectHeading);
+    // window.addEventListener("scroll", listenScrollEvent);
+    // effect
+    return () => {
+      // cleanup
+    };
+  }, [window.location.pathname]);
+  const listenScrollEvent = () => {};
   return (
     <ScrollableSection name={props.urlName}>
       <div className="project-container-wrapper">
@@ -18,7 +34,11 @@ function Project(props) {
           </div>
           <div className="project-container-content-left">
             <div className="project-container-content-left-img">
-              <img style={{width:"300px",height:"200px"}} src={sstatic} alt="" />
+              <img
+                style={{ width: "300px", height: "200px" }}
+                src={sstatic}
+                alt=""
+              />
             </div>
             <div className="project-container-content-left-content">
               <p>
