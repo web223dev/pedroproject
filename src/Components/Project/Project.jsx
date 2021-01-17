@@ -19,7 +19,7 @@ function Project(props) {
         <div className="project-container">
           <div className="project-container-headings">
             <div
-              className="f1-5 flex-start project-heading"
+              className="f1-5 flex-start project-heading fb"
               style={{ color: `${itemColor}` }}
             >
               {props.projectName}
