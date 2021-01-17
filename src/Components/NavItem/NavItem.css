@@ -7,7 +7,25 @@
     box-sizing: border-box;
     padding-right: 1rem;
     padding-bottom: 1rem;
-    /* color: gray; */
+    font-family: Helvetica, Helvetica, Arial, sans-serif;
+
+
+ 
+    font-family :Helvetica, Helvetica, Arial, sans-serif;
+    font-feature-settings: "liga", "lnum";
+    font-size :15.64px;
+    font-stretch :100%;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: common-ligatures;
+    font-variant-numeric: lining-nums;
+    font-weight:400;
+    height :250.062px;
+    letter-spacing: 0.23px;
+    line-height :23px;
+    
+    text-size-adjust :100%;
 }
 .nav-item-container-wrapper:hover{
     color: lightgrey;
@@ -15,4 +33,18 @@
 .item-date{
     position: absolute;
     right: 1rem;top: 15%;
+    font-size: 1.5rem;
+    font-family :Helvetica, Helvetica, Arial, sans-serif;
+    font-weight: 200;
+}
+.nav-item-container-wrapper p{
+    /* font-size: 100px; */
+    /* font: inherit; */
+    /* vertical-align: baseline; */
+    /* font-weight: 300; */
+ 
+}
+
+.nav-item-container-wrapper h2{
+
 }

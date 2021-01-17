@@ -6,6 +6,7 @@
 .project-container{
     display: grid;
     grid-template-columns: 60% 40%;
+    font-family: Helvetica, Helvetica, Arial, sans-serif;
     grid-template-rows: 10vh minmax(70vh,min-content);
     grid-template-areas: "project-container-headings project-container-headings"
                         "project-container-content-left project-container-content-right";
@@ -23,6 +24,8 @@
 }
 .project-date{
     flex: 1;
+    font-family: Helvetica, Helvetica, Arial, sans-serif;
+
 }
 .project-container-content-left{
     grid-area: project-container-content-left;
@@ -41,8 +44,12 @@
 }
 .project-container-content-right{
     grid-area: project-container-content-right;
-    /* display: flex; */
-    /* flex-flow: column; */
-    /* align-items: flex-end; */
     text-align: end;
+    font-family: Helvetica, Helvetica, Arial, sans-serif;
+    /* font-weight: 200; */
+    line-height: 15px;
+
+}
+.project-container-content-left-content p{
+    line-height: 23px;
 }

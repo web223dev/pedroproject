@@ -8,6 +8,7 @@
     height: 90%;width: 100%;
     background-color: white;
     position: relative;
+    font-family: Helvetica, Helvetica, Arial, sans-serif;
 }
 .name{
     position: absolute;
