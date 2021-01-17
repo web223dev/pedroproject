@@ -78,3 +78,81 @@
     grid-area: home-container3;
     background-color: lightgray;
 }
+
+/* Responsivenss */
+/* Setting width of left div */
+@media screen and (max-width: 1101px) {
+    .home-container {
+        grid-area: home-container;
+        /* background-color: lightgray; */
+        display: grid;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 20vh minmax(80vh, min-content);
+        grid-template-areas: "header header"
+            "left-nav projectsContent";
+    }
+    .left-nav {
+        grid-area: left-nav;
+        height: 100%;
+        width: 35%;
+        border-right: 1px solid black;
+        position: fixed;
+        top: 20vh;
+        /* overflow-y: auto; */
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 75% 5%;
+    }
+}
+@media screen and (max-width: 901px) {
+    .home-container {
+        grid-area: home-container;
+        /* background-color: lightgray; */
+        display: grid;
+        grid-template-columns: 45% 55%;
+        grid-template-rows: 20vh minmax(80vh, min-content);
+        grid-template-areas: "header header"
+            "left-nav projectsContent";
+    }
+    .left-nav {
+        grid-area: left-nav;
+        height: 100%;
+        width: 45%;
+        border-right: 1px solid black;
+        position: fixed;
+        top: 20vh;
+        /* overflow-y: auto; */
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 75% 5%;
+    }
+}
+@media screen and (max-width: 825px) {
+    .home-container {
+        grid-area: home-container;
+        /* background-color: lightgray; */
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20vh minmax(80vh, min-content);
+        grid-template-areas: "header"
+            "left-nav";
+    }
+    .left-nav {
+        grid-area: left-nav;
+        height: 100%;
+        width: 100%;
+        border-right: 1px solid black;
+        position: fixed;
+        top: 20vh;
+        /* overflow-y: auto; */
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 75% 5%;
+    }
+    .projectsContent{
+        display: none;
+    }
+}

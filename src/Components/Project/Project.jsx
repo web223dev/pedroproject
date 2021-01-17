@@ -18,7 +18,7 @@ function Project(props) {
           </div>
           <div className="project-container-content-left">
             <div className="project-container-content-left-img">
-              <img className="w100h100" src={sstatic} alt="" />
+              <img style={{width:"300px",height:"200px"}} src={sstatic} alt="" />
             </div>
             <div className="project-container-content-left-content">
               <p>
@@ -61,11 +61,12 @@ function Project(props) {
               </p>
             </div>
           </div>
-          <div className="project-container-content-right">
+          {/* <div className="project-container-content-right">
             <h2 className="f1">Company: Conduit</h2>
             <h2 className="f1">Managing Director: David Morales</h2>
             <h2 className="f1">Creative: Pedro Damasceno</h2>
           </div>
+         */}
         </div>
       </div>
     </ScrollableSection>
