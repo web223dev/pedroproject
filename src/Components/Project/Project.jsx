@@ -18,7 +18,7 @@ function Project(props) {
           </div>
           <div className="project-container-content-left">
             <div className="project-container-content-left-img">
-              <img className="w100h100" src={sstatic} alt=""/>
+              <img className="w100h100" src={sstatic} alt="" />
             </div>
             <div className="project-container-content-left-content">
               <p>

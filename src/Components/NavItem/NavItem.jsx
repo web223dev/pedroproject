@@ -3,7 +3,6 @@ import { withRouter } from "react-router-dom";
 import ScrollableSection, { ScrollableLink } from "react-update-url-on-scroll";
 import "./NavItem.css";
 function NavItem(props) {
-  console.log(`/${props.projectName}`)
   return (
     <ScrollableLink href={`/${props.projectName}`}>
       <div
@@ -13,13 +12,10 @@ function NavItem(props) {
         }}
       >
         <h2>{props.projectName}</h2>
-        <p className="f1">
-          Le garage a ouvert en mars 2018. J’ai réussi à me salarier en août.
-          Les gens réparent eux-mêmes leur véhicule et je les accompagne. Ce
-          n’est pas pas une activité très rentable Le garage a ouvert en mars
-          2018. J’ai réussi à me salarier en août. Les gens réparent eux-mêmes
-          leur véhicule et je les accompagne. Ce n’est pas pas une activité très
-          rentable
+        <p className="f1-3">
+          The garage opened in March 2018 . I managed to get paid in August.
+          People repair their vehicles themselves and I accompany them. It is
+          not...
         </p>
         <h2 className="item-date">22.12.2020</h2>
       </div>

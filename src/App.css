@@ -63,7 +63,12 @@ html {
 .f1 {
   font-size: 1rem;
 }
-
+.f1-2{
+  font-size: 1.2rem;
+}
+.f1-3{
+  font-size: 1.3rem;
+}
 .f1-5 {
   font-size: 1.5rem;
 }

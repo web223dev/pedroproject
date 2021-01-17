@@ -10,7 +10,7 @@
     font-family :Helvetica, Helvetica, Arial, sans-serif;
     font-feature-settings: "liga", "lnum";
     /* font-size :15.64px; */
-    line-height: 2rem;
+    /* line-height: 2rem; */
 }
 .nav-item-container-wrapper:hover{
     color: lightgrey;
