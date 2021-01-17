@@ -36,11 +36,11 @@ function Home(props) {
             </div>
           </div>
           <div className="projectsContent" >
-            <Project urlName={"Project1"} projectName={"Project1"}/>
-            <Project urlName={"Project2"} projectName={"Project2"}/>
-            <Project urlName={"Project3"} projectName={"Project3"}/>
-            <Project urlName={"Project4"} projectName={"Project4"}/>
-            <Project urlName={"Project5"} projectName={"Project5"}/>
+            <Project currentUrl={currentUrl} urlName={"Project1"} projectName={"Project1"}/>
+            <Project currentUrl={currentUrl} urlName={"Project2"} projectName={"Project2"}/>
+            <Project currentUrl={currentUrl} urlName={"Project3"} projectName={"Project3"}/>
+            <Project currentUrl={currentUrl} urlName={"Project4"} projectName={"Project4"}/>
+            <Project currentUrl={currentUrl} urlName={"Project5"} projectName={"Project5"}/>
           </div>
         </div>
     </div>

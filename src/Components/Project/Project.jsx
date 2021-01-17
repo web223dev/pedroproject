@@ -4,28 +4,24 @@ import sstatic from "./Assets/sstatic.PNG";
 import ScrollableSection, { ScrollableLink } from "react-update-url-on-scroll";
 
 function Project(props) {
-  const [headingColor, setheadingColor] = useState("red");
+  const [itemColor, setitemColor] = useState("black");
   useEffect(() => {
-    // console.log(window.location)
-    // const observer = new IntersectionObserver(
-    //   ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 10),
-    //   { threshold: [1] }
-    // );
-
-    // observer.observe(projectHeading);
-    // window.addEventListener("scroll", listenScrollEvent);
-    // effect
+    if (props.currentUrl === `/${props.projectName}`) setitemColor("blue");
+    else setitemColor("black");
     return () => {
       // cleanup
     };
-  }, [window.location.pathname]);
+  }, [props.currentUrl]);
   const listenScrollEvent = () => {};
   return (
     <ScrollableSection name={props.urlName}>
       <div className="project-container-wrapper">
         <div className="project-container">
           <div className="project-container-headings">
-            <div className="f1-5 flex-start project-heading">
+            <div
+              className="f1-5 flex-start project-heading"
+              style={{ color: `${itemColor}` }}
+            >
               {props.projectName}
             </div>
             <div className="f1-5 flex-end project-date mute-txt">
