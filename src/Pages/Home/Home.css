@@ -60,8 +60,6 @@
 
 .projectsContent {
     grid-area: projectsContent;
-    box-sizing: border-box;
-    padding-left: 5%;
 }
 
 .test {

@@ -18,7 +18,7 @@ function NavItem(props) {
         className="nav-item-container-wrapper flex-col pointer"
         style={{color:`${itemColor}`}}
       >
-        <h2>{props.projectName}</h2>
+        <h2 className="f1-5">{props.projectName}</h2>
         <p className="f1-3">
           The garage opened in March 2018 . I managed to get paid in August.
           People repair their vehicles themselves and I accompany them. It is

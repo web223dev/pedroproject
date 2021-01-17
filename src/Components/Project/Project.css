@@ -2,6 +2,10 @@
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: minmax(80vh, min-content);
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-bottom: 3%;
 }
 
 .project-container {
@@ -17,7 +21,6 @@
     grid-area: project-container-headings;
     position: sticky;
     top: 15vh;
-    /* top: 10vh; */
     z-index: 3;
     display: flex;
     /* background-color: red; */
@@ -48,7 +51,6 @@
     box-sizing: border-box;
     padding-top: 2rem;
     text-align: left;
-    font-size: 1.4rem;
     position: relative;
 }
 

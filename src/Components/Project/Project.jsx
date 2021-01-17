@@ -17,7 +17,7 @@ function Project(props) {
     <ScrollableSection name={props.urlName}>
       <div className="project-container-wrapper">
         <div className="project-container">
-          <div className="project-container-headings">
+          <div className="project-container-headings f1-5">
             <div
               className="f1-5 flex-start project-heading fb"
               style={{ color: `${itemColor}` }}
@@ -36,7 +36,7 @@ function Project(props) {
                 alt=""
               />
             </div>
-            <div className="project-container-content-left-content">
+            <div className="project-container-content-left-content f1-3">
               <p>
                 <span className="fb">The garage opened in March 2018. </span>I
                 managed to get paid in August. People repair their vehicles
