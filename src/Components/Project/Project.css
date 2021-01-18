@@ -20,7 +20,7 @@
 .project-container-headings {
     grid-area: project-container-headings;
     position: sticky;
-    top: 15vh;
+    top: 17vh;
     z-index: 3;
     display: flex;
     /* background-color: red; */

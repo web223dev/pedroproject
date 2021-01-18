@@ -3,12 +3,12 @@ import { withRouter } from "react-router-dom";
 import ScrollableSection, { ScrollableLink } from "react-update-url-on-scroll";
 import "./NavItem.css";
 function NavItem(props) {
-  const [itemColor, setitemColor] = useState('black')
+  const [itemColor, setitemColor] = useState('lightgrey')
   useEffect(() => {
     if(props.currentUrl===`/${props.projectName}`)
     setitemColor('blue')
     else
-    setitemColor('black')
+    setitemColor('lightgrey')
     return () => {
     }
   }, [props.currentUrl])

@@ -8,20 +8,23 @@ function Home(props) {
   const [currentUrl, setcurrentUrl] = useState('/')
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
+    setTimeout(() => {
+      listenScrollEvent()
+    }, 500);
     return () => {
       // cleanup
     }
-  }, [])
+  }, [window.location.pathname])
   const listenScrollEvent=()=>{
     // console.log(window.location.pathname)
+
     setcurrentUrl((prevState)=>window.location.pathname)
   }
   return (
     <div className="home-wrapper-container">
-      {/* <ScrollableSection name={"project1"}> */}
         <div className="home-container">
           <div className="header" style={{ zIndex: "2" }}>
-            <Header />
+            <Header currentUrl={currentUrl}/>
           </div>
           <div className="left-nav">
             <div className="left-nav-items">

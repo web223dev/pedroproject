@@ -12,17 +12,17 @@
 }
 .name{
     position: absolute;
-    top: 0;
+    top: 5%;
     left: 0;
     color: blue;
 }
 .initiative{
     position: absolute;
-    bottom: 15%;
+    bottom: 5%;
     left: 0;
 }
 .about{
     position: absolute;    
-    top: 0;
+    top: 5%;
     right: 0;
 }
