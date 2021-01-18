@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Project.css";
 import sstatic from "./Assets/sstatic.PNG";
 import ScrollableSection, { ScrollableLink } from "react-update-url-on-scroll";
+import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
 function Project(props) {
   const [itemColor, setitemColor] = useState("black");
@@ -29,12 +30,19 @@ function Project(props) {
             </div>
           </div>
           <div className="project-container-content-left">
-            <div className="project-container-content-left-img">
-              <img
+            <div className="project-container-content-left-img bg-dark">
+              <ImageCarousel projectId={props.projectName}/>
+              {/* <img
                 style={{ width: "300px", height: "200px" }}
                 src={sstatic}
                 alt=""
               />
+              <img
+                style={{ width: "300px", height: "200px" }}
+                src={sstatic}
+                alt=""
+              /> */}
+              
             </div>
             <div className="project-container-content-left-content f1-3">
               <p>

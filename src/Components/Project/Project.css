@@ -39,12 +39,14 @@
 .project-container-content-left {
     grid-area: project-container-content-left;
     display: grid;
-    /* grid-template-columns: 100%; */
+    grid-template-columns: 100%;
     grid-template-rows: minmax(20vh,min-content) minmax(80vh, min-content);
 }
 
 .project-container-content-left-img {
     /* background-color: white; */
+    /* display: flex; */
+    /* overflow: hidden; */
 }
 
 .project-container-content-left-content {
