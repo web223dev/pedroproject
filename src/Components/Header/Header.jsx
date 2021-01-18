@@ -5,6 +5,7 @@ import { goToTop } from 'react-update-url-on-scroll'
 function Header(props) {
     const [nameColor, setnameColor] = useState('blue')
     useEffect(() => {
+        // console.log(window.pageXOffset)
         if(props.currentUrl===`/`)
         setnameColor('blue')
         else
