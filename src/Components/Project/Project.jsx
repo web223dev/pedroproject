@@ -29,60 +29,51 @@ function Project(props) {
               22.12.2020
             </div>
           </div>
-          <div className="project-container-content-left">
-            <div className="project-container-content-left-img bg-dark">
-              <ImageCarousel projectId={props.projectName}/>
-              {/* <img
-                style={{ width: "300px", height: "200px" }}
-                src={sstatic}
-                alt=""
-              />
-              <img
-                style={{ width: "300px", height: "200px" }}
-                src={sstatic}
-                alt=""
-              /> */}
-              
+          <div className="project-container-content-div">
+            <div className="project-container-content-left">
+              <div className="project-container-content-left-img">
+                <ImageCarousel projectId={props.projectName}/>
+              </div>
+              <div className="project-container-content-left-content f1-3">
+              <p>
+                <span className="fb">The garage opened in March 2018. </span>I
+                managed to get paid in August. People repair their vehicles
+                themselves and I accompany them. It is not a very profitable
+                business, it will certainly be threatened at one point or
+                another because we operate with an income-based pricing
+                structure and the majority of people are on low prices. The bet
+                that there are people with higher incomes to offset the others
+                is not won. But for the year to come in any case we are quiet.
+              </p>
+              <p>
+                <span className="fb">My career </span>
+                has not always been linked to manual activities: I did a lot of
+                environmental education, I was a technician in renewable
+                energies ... I set up a lot of projects, worked to create
+                institutional dialogue , I did animation in schools, in various
+                associations. Pretty much everywhere. I have moved a lot. Then I
+                got sick of it.
+              </p>
+              <p>
+                <span className="fb">The garage opened in March 2018. </span>I
+                managed to get paid in August. People repair their vehicles
+                themselves and I accompany them. It is not a very profitable
+                business, it will certainly be threatened at one point or
+                another because we operate with an income-based pricing
+                structure and the majority of people are on low prices. The bet
+                that there are people with higher incomes to offset the others
+                is not won. But for the year to come in any case we are quiet.
+              </p>
+              <p>
+                <span className="fb">My career </span>
+                has not always been linked to manual activities: I did a lot of
+                environmental education, I was a technician in renewable
+                energies ... I set up a lot of projects, worked to create
+                institutional dialogue , I did animation in schools, in various
+                associations. Pretty much everywhere. I have moved a lot. Then I
+                got sick of it.
+              </p>
             </div>
-            <div className="project-container-content-left-content f1-3">
-              <p>
-                <span className="fb">The garage opened in March 2018. </span>I
-                managed to get paid in August. People repair their vehicles
-                themselves and I accompany them. It is not a very profitable
-                business, it will certainly be threatened at one point or
-                another because we operate with an income-based pricing
-                structure and the majority of people are on low prices. The bet
-                that there are people with higher incomes to offset the others
-                is not won. But for the year to come in any case we are quiet.
-              </p>
-              <p>
-                <span className="fb">My career </span>
-                has not always been linked to manual activities: I did a lot of
-                environmental education, I was a technician in renewable
-                energies ... I set up a lot of projects, worked to create
-                institutional dialogue , I did animation in schools, in various
-                associations. Pretty much everywhere. I have moved a lot. Then I
-                got sick of it.
-              </p>
-              <p>
-                <span className="fb">The garage opened in March 2018. </span>I
-                managed to get paid in August. People repair their vehicles
-                themselves and I accompany them. It is not a very profitable
-                business, it will certainly be threatened at one point or
-                another because we operate with an income-based pricing
-                structure and the majority of people are on low prices. The bet
-                that there are people with higher incomes to offset the others
-                is not won. But for the year to come in any case we are quiet.
-              </p>
-              <p>
-                <span className="fb">My career </span>
-                has not always been linked to manual activities: I did a lot of
-                environmental education, I was a technician in renewable
-                energies ... I set up a lot of projects, worked to create
-                institutional dialogue , I did animation in schools, in various
-                associations. Pretty much everywhere. I have moved a lot. Then I
-                got sick of it.
-              </p>
             </div>
           </div>
           {/* <div className="project-container-content-right">

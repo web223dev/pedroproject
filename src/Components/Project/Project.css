@@ -73,24 +73,8 @@
     color: red;
   }
 /* Responsiveness */
-@media screen and (max-width: 1200px) {
-    .project-container {
-        display: grid;
-        grid-template-columns: 70% 30%;
-        font-family: Helvetica, Helvetica, Arial, sans-serif;
-        grid-template-rows: 10vh minmax(70vh, min-content);
-        grid-template-areas: "project-container-headings project-container-headings"
-            "project-container-content-left .";
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .project-container {
-        display: grid;
-        grid-template-columns: 100%;
-        font-family: Helvetica, Helvetica, Arial, sans-serif;
-        grid-template-rows: 10vh minmax(70vh, min-content);
-        grid-template-areas: "project-container-headings"
-            "project-container-content-left";
+@media screen and (max-width: 1900px) {
+    .project-container-content-div{
+        width: 550px;
     }
 }

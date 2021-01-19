@@ -8,7 +8,7 @@ function ImageCarousel(props) {
         <div class="carousel-item active">
           <img
             class="d-block"
-            style={{ width: "520px", height: "300px", objectFit: "fill" }}
+            style={{ width: "100%", height: "300px", objectFit: "fill" }}
             src={sstatic}
             alt="First slide"
           />
@@ -16,7 +16,7 @@ function ImageCarousel(props) {
         <div class="carousel-item">
           <img
             class="d-block"
-            style={{ width: "520px", height: "300px", objectFit: "fill" }}
+            style={{ width: "100%", height: "300px", objectFit: "fill" }}
             src={sstatic}
             alt="Second slide"
           />
@@ -24,7 +24,7 @@ function ImageCarousel(props) {
         <div class="carousel-item">
           <img
             class="d-block"
-            style={{ width: "520px", height: "300px", objectFit: "fill" }}
+            style={{ width: "100%", height: "300px", objectFit: "fill" }}
             src={sstatic}
             alt="Third slide"
           />
