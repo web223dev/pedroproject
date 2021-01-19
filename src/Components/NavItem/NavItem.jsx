@@ -5,26 +5,28 @@ import "./NavItem.css";
 function NavItem(props) {
   const [itemColor, setitemColor] = useState('lightgrey')
   useEffect(() => {
-    if(props.currentUrl===`/${props.projectName}`)
-    setitemColor('blue')
+    if (props.currentUrl === `/${props.project.blog_title[0].text}`)
+      setitemColor('blue')
     else
-    setitemColor('lightgrey')
+      setitemColor('lightgrey')
     return () => {
     }
   }, [props.currentUrl])
   return (
-    <ScrollableLink href={`/${props.projectName}`}>
+    <ScrollableLink href={`/${props.project.blog_title[0].text}`}>
       <div
         className="nav-item-container-wrapper flex-col pointer"
-        style={{color:`${itemColor}`}}
+        style={{ color: `${itemColor}` }}
       >
-        <h2 className="f1-5">{props.projectName}</h2>
+        <h2 className="f1-5">{props.project.blog_title[0].text}</h2>
         <p className="f1-3">
           The garage opened in March 2018 . I managed to get paid in August.
           People repair their vehicles themselves and I accompany them. It is
           not...
         </p>
-        <h2 className="item-date">22.12.2020</h2>
+        <h2 className="item-date">
+          {props.project.date}
+        </h2>
       </div>
     </ScrollableLink>
   );

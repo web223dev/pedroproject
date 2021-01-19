@@ -4,6 +4,15 @@ import "./Home.css";
 import Header from "../../Components/Header/Header";
 import NavItem from "../../Components/NavItem/NavItem";
 import Project from "../../Components/Project/Project";
+
+import Prismic from '@prismicio/client'
+import { Date, Link, RichText } from 'prismic-reactjs'
+
+const apiEndpoint = 'https://aashirtest2.cdn.prismic.io/api/v2'
+const accessToken = 'MC5ZQWJuUHhNQUFDY0FyajZ2.A--_ve-_ve-_vT_vv70vTO-_ve-_ve-_vWhT77-9JX7vv73vv73vv70g77-977-977-9VV1cTU_vv73vv71FPw' // This is where you would add your access token for a Private repository
+const client = Prismic.client(apiEndpoint, { accessToken })
+
+
 function Home(props) {
   const [currentUrl, setcurrentUrl] = useState('/')
   useEffect(() => {
@@ -15,37 +24,70 @@ function Home(props) {
       // cleanup
     }
   }, [window.location.pathname])
-  const listenScrollEvent=()=>{
+
+  // Fetching data
+  const [doc, setDocData] = useState(null)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      client.query('').then(res => {
+        setDocData((prevState) => res)
+      })
+    }
+    fetchData()
+  }, [])
+
+  const listenScrollEvent = () => {
     // console.log(window.location.pathname)
 
-    setcurrentUrl((prevState)=>window.location.pathname)
+    setcurrentUrl((prevState) => window.location.pathname)
   }
   return (
     <div className="home-wrapper-container">
-        <div className="home-container">
-          <div className="header" style={{ zIndex: "2" }}>
-            <Header currentUrl={currentUrl}/>
+      <div className="home-container">
+        <div className="header" style={{ zIndex: "2" }}>
+          <Header currentUrl={currentUrl} />
+        </div>
+        <div className="left-nav">
+          <div className="left-nav-items">
+            {
+              doc ?
+                doc.results.map((project, index) => {
+                  return (
+                    <NavItem currentUrl={currentUrl} projectName={"Project1"} project={project.data}/>
+                  )
+                })
+                :
+                null
+            }
+            {/* <NavItem currentUrl={currentUrl} projectName={"Project1"} /> */}
+            {/* <NavItem currentUrl={currentUrl} projectName={"Project2"} /> */}
+            {/* <NavItem currentUrl={currentUrl} projectName={"Project3"} /> */}
+            {/* <NavItem currentUrl={currentUrl} projectName={"Project4"} /> */}
+            {/* <NavItem currentUrl={currentUrl} projectName={"Project5"} /> */}
           </div>
-          <div className="left-nav">
-            <div className="left-nav-items">
-              <NavItem currentUrl={currentUrl} projectName={"Project1"}/>
-              <NavItem currentUrl={currentUrl} projectName={"Project2"}/>
-              <NavItem currentUrl={currentUrl} projectName={"Project3"}/>
-              <NavItem currentUrl={currentUrl} projectName={"Project4"}/>
-              <NavItem currentUrl={currentUrl} projectName={"Project5"}/>
-            </div>
-            <div className="left-nav-footer">
-              <h1 className="mute-txt f1-5">Contact me IG</h1>
-            </div>
-          </div>
-          <div className="projectsContent" >
-            <Project currentUrl={currentUrl} urlName={"Project1"} projectName={"Project1"}/>
-            <Project currentUrl={currentUrl} urlName={"Project2"} projectName={"Project2"}/>
-            <Project currentUrl={currentUrl} urlName={"Project3"} projectName={"Project3"}/>
-            <Project currentUrl={currentUrl} urlName={"Project4"} projectName={"Project4"}/>
-            <Project currentUrl={currentUrl} urlName={"Project5"} projectName={"Project5"}/>
+          <div className="left-nav-footer">
+            <h1 className="mute-txt f1-5">Contact me IG</h1>
           </div>
         </div>
+        <div className="projectsContent" >
+          {
+            doc ?
+              doc.results.map((project, index) => {
+                return (
+                  <Project key={index} currentUrl={currentUrl} urlName={"Project1"} projectName={"Project1"} project={project.data} />
+                )
+              })
+              :
+              null
+          }
+          {/* <Project currentUrl={currentUrl} urlName={"Project1"} projectName={"Project1"} /> */}
+          {/* <Project currentUrl={currentUrl} urlName={"Project2"} projectName={"Project2"} /> */}
+          {/* <Project currentUrl={currentUrl} urlName={"Project3"} projectName={"Project3"} /> */}
+          {/* <Project currentUrl={currentUrl} urlName={"Project4"} projectName={"Project4"} /> */}
+          {/* <Project currentUrl={currentUrl} urlName={"Project5"} projectName={"Project5"} /> */}
+        </div>
+      </div>
     </div>
   );
 }

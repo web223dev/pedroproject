@@ -6,16 +6,21 @@ import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
 function Project(props) {
   const [itemColor, setitemColor] = useState("black");
+
+
+
+
   useEffect(() => {
-    if (props.currentUrl === `/${props.projectName}`) setitemColor("blue");
+    // console.log(props.project)
+    if (props.currentUrl === `/${props.project.blog_title[0].text}`) setitemColor("blue");
     else setitemColor("black");
     return () => {
       // cleanup
     };
   }, [props.currentUrl]);
-  const listenScrollEvent = () => {};
+  const listenScrollEvent = () => { };
   return (
-    <ScrollableSection name={props.urlName}>
+    <ScrollableSection name={props.project.blog_title[0].text}>
       <div className="project-container-wrapper">
         <div className="project-container">
           <div className="project-container-headings f1-5">
@@ -23,57 +28,26 @@ function Project(props) {
               className="f1-5 flex-start project-heading fb"
               style={{ color: `${itemColor}` }}
             >
-              {props.projectName}
+              {props.project.blog_title[0].text}
             </div>
             <div className="f1-5 flex-end project-date mute-txt">
-              22.12.2020
+              {props.project.date}
             </div>
           </div>
           <div className="project-container-content-div">
             <div className="project-container-content-left">
               <div className="project-container-content-left-img">
-                <ImageCarousel projectId={props.projectName}/>
+                <ImageCarousel projectId={props.projectName} />
               </div>
               <div className="project-container-content-left-content f1-3">
-              <p>
-                <span className="fb">The garage opened in March 2018. </span>I
-                managed to get paid in August. People repair their vehicles
-                themselves and I accompany them. It is not a very profitable
-                business, it will certainly be threatened at one point or
-                another because we operate with an income-based pricing
-                structure and the majority of people are on low prices. The bet
-                that there are people with higher incomes to offset the others
-                is not won. But for the year to come in any case we are quiet.
-              </p>
-              <p>
-                <span className="fb">My career </span>
-                has not always been linked to manual activities: I did a lot of
-                environmental education, I was a technician in renewable
-                energies ... I set up a lot of projects, worked to create
-                institutional dialogue , I did animation in schools, in various
-                associations. Pretty much everywhere. I have moved a lot. Then I
-                got sick of it.
-              </p>
-              <p>
-                <span className="fb">The garage opened in March 2018. </span>I
-                managed to get paid in August. People repair their vehicles
-                themselves and I accompany them. It is not a very profitable
-                business, it will certainly be threatened at one point or
-                another because we operate with an income-based pricing
-                structure and the majority of people are on low prices. The bet
-                that there are people with higher incomes to offset the others
-                is not won. But for the year to come in any case we are quiet.
-              </p>
-              <p>
-                <span className="fb">My career </span>
-                has not always been linked to manual activities: I did a lot of
-                environmental education, I was a technician in renewable
-                energies ... I set up a lot of projects, worked to create
-                institutional dialogue , I did animation in schools, in various
-                associations. Pretty much everywhere. I have moved a lot. Then I
-                got sick of it.
-              </p>
-            </div>
+                {
+                  props.project.para_field.map((para,index)=>{
+                    return(
+                      <p key={index} className={para.type}>{para.text}</p>
+                    )
+                  })
+                }
+              </div>
             </div>
           </div>
           {/* <div className="project-container-content-right">
