@@ -11,16 +11,14 @@ function Project(props) {
 
 
   useEffect(() => {
-    // console.log(props.project)
-    if (props.currentUrl === `/${props.project.blog_title[0].text}`) setitemColor("blue");
+    if (props.currentUrl === `/${props.project.title[0].text}`) setitemColor("blue");
     else setitemColor("black");
     return () => {
-      // cleanup
     };
   }, [props.currentUrl]);
   const listenScrollEvent = () => { };
   return (
-    <ScrollableSection name={props.project.blog_title[0].text}>
+    <ScrollableSection name={props.project.title[0].text}>
       <div className="project-container-wrapper">
         <div className="project-container">
           <div className="project-container-headings f1-5">
@@ -28,20 +26,20 @@ function Project(props) {
               className="f1-5 flex-start project-heading fb"
               style={{ color: `${itemColor}` }}
             >
-              {props.project.blog_title[0].text}
+              {props.project.title[0].text}
             </div>
             <div className="f1-5 flex-end project-date mute-txt">
-              {props.project.date}
+              {props.project.projectdates}
             </div>
           </div>
           <div className="project-container-content-div">
             <div className="project-container-content-left">
               <div className="project-container-content-left-img">
-                <ImageCarousel projectId={props.projectName} />
+                <ImageCarousel projectId={props.project.title[0].text} projectimages={props.project.projectimages}/>
               </div>
               <div className="project-container-content-left-content f1-3">
                 {
-                  props.project.para_field.map((para,index)=>{
+                  props.project.description.map((para,index)=>{
                     return(
                       <p key={index} className={para.type}>{para.text}</p>
                     )

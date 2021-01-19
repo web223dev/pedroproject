@@ -5,7 +5,7 @@ import "./NavItem.css";
 function NavItem(props) {
   const [itemColor, setitemColor] = useState('lightgrey')
   useEffect(() => {
-    if (props.currentUrl === `/${props.project.blog_title[0].text}`)
+    if (props.currentUrl === `/${props.project.title[0].text}`)
       setitemColor('blue')
     else
       setitemColor('lightgrey')
@@ -13,12 +13,12 @@ function NavItem(props) {
     }
   }, [props.currentUrl])
   return (
-    <ScrollableLink href={`/${props.project.blog_title[0].text}`}>
+    <ScrollableLink href={`/${props.project.title[0].text}`}>
       <div
         className="nav-item-container-wrapper flex-col pointer"
         style={{ color: `${itemColor}` }}
       >
-        <h2 className="f1-5">{props.project.blog_title[0].text}</h2>
+        <h2 className="f1-5">{props.project.title[0].text}</h2>
         <p className="f1-3">
           The garage opened in March 2018 . I managed to get paid in August.
           People repair their vehicles themselves and I accompany them. It is

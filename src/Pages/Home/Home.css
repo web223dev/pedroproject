@@ -33,7 +33,7 @@
 .left-nav {
     grid-area: left-nav;
     height: 100%;
-    width: 30%;
+    width: 29%;
     border-right: 1px solid black;
     position: fixed;
     top: 25vh;

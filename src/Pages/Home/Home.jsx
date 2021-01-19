@@ -8,8 +8,10 @@ import Project from "../../Components/Project/Project";
 import Prismic from '@prismicio/client'
 import { Date, Link, RichText } from 'prismic-reactjs'
 
-const apiEndpoint = 'https://aashirtest2.cdn.prismic.io/api/v2'
-const accessToken = 'MC5ZQWJuUHhNQUFDY0FyajZ2.A--_ve-_ve-_vT_vv70vTO-_ve-_ve-_vWhT77-9JX7vv73vv73vv70g77-977-977-9VV1cTU_vv73vv71FPw' // This is where you would add your access token for a Private repository
+// const apiEndpoint = 'https://aashirtest2.cdn.prismic.io/api/v2'
+// const accessToken = 'MC5ZQWJuUHhNQUFDY0FyajZ2.A--_ve-_ve-_vT_vv70vTO-_ve-_ve-_vWhT77-9JX7vv73vv73vv70g77-977-977-9VV1cTU_vv73vv71FPw' // This is where you would add your access token for a Private repository
+const apiEndpoint = 'https://portfolio-pedro.cdn.prismic.io/api/v2'  
+const accessToken = 'MC5ZQWM0NWhNQUFDWUFyN1RG.77-9O--_ve-_ve-_ve-_ve-_ve-_vQ3vv73vv73vv73vv73vv71Y77-9Be-_vSEBMe-_vU_vv73vv73vv71-bu-_ve-_ve-_vQQ'
 const client = Prismic.client(apiEndpoint, { accessToken })
 
 
@@ -25,13 +27,13 @@ function Home(props) {
     }
   }, [window.location.pathname])
 
-  // Fetching data
+  // Fetching data from prismic
   const [doc, setDocData] = useState(null)
 
   useEffect(() => {
     const fetchData = async () => {
       client.query('').then(res => {
-        setDocData((prevState) => res)
+        setDocData((prevState) => res.results)
       })
     }
     fetchData()
@@ -52,19 +54,14 @@ function Home(props) {
           <div className="left-nav-items">
             {
               doc ?
-                doc.results.map((project, index) => {
+                doc.map((project, index) => {
                   return (
                     <NavItem currentUrl={currentUrl} projectName={"Project1"} project={project.data}/>
                   )
                 })
                 :
                 null
-            }
-            {/* <NavItem currentUrl={currentUrl} projectName={"Project1"} /> */}
-            {/* <NavItem currentUrl={currentUrl} projectName={"Project2"} /> */}
-            {/* <NavItem currentUrl={currentUrl} projectName={"Project3"} /> */}
-            {/* <NavItem currentUrl={currentUrl} projectName={"Project4"} /> */}
-            {/* <NavItem currentUrl={currentUrl} projectName={"Project5"} /> */}
+            } 
           </div>
           <div className="left-nav-footer">
             <h1 className="mute-txt f1-5">Contact me IG</h1>
@@ -73,7 +70,7 @@ function Home(props) {
         <div className="projectsContent" >
           {
             doc ?
-              doc.results.map((project, index) => {
+              doc.map((project, index) => {
                 return (
                   <Project key={index} currentUrl={currentUrl} urlName={"Project1"} projectName={"Project1"} project={project.data} />
                 )
@@ -81,11 +78,6 @@ function Home(props) {
               :
               null
           }
-          {/* <Project currentUrl={currentUrl} urlName={"Project1"} projectName={"Project1"} /> */}
-          {/* <Project currentUrl={currentUrl} urlName={"Project2"} projectName={"Project2"} /> */}
-          {/* <Project currentUrl={currentUrl} urlName={"Project3"} projectName={"Project3"} /> */}
-          {/* <Project currentUrl={currentUrl} urlName={"Project4"} projectName={"Project4"} /> */}
-          {/* <Project currentUrl={currentUrl} urlName={"Project5"} projectName={"Project5"} /> */}
         </div>
       </div>
     </div>
