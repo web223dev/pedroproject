@@ -5,7 +5,7 @@ function AboutLeftNav(props) {
   useEffect(() => {
     // Setting date
     var d = new Date(props.project.timestamp);
-    setprojectDates((prevState) => d.getMonth() + 1 + "/" + d.getFullYear());
+    setprojectDates((prevState) => d.getMonth() + 1 + "." + d.getFullYear());
     return () => {};
   }, []);
   return (

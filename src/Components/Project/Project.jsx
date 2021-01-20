@@ -13,7 +13,7 @@ function Project(props) {
   useEffect(() => {
         // Setting date
         var d = new Date(props.project.timestamp);
-        setprojectDates((prevState)=>(d.getMonth()+1) + '/' + d.getFullYear())
+        setprojectDates((prevState)=>(d.getMonth()+1) + '.' + d.getFullYear())
     if (props.currentUrl === `/${props.project.title[0].text}`) setitemColor("blue");
     else setitemColor("black");
     return () => {

@@ -10,7 +10,7 @@ function NavItem(props) {
   useEffect(() => {
     // Setting date
     var d = new Date(props.project.timestamp);
-    setprojectDates((prevState)=>(d.getMonth()+1) + '/' + d.getFullYear())
+    setprojectDates((prevState)=>(d.getMonth()+1) + '.' + d.getFullYear())
 
     var localnavdes=""
     for(let i =0 ;i<110;i++)
