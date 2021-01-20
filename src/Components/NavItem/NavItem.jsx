@@ -32,7 +32,7 @@ function NavItem(props) {
       >
         <h2 className="f1-5 item-heading">
           <span style={{ flex: "4",color: `${itemColor}` }}>{props.project.title[0].text}</span>
-          <span style={{ flex: "1",color: `${itemColor}` }}>{projectDates}</span>
+          <span className="item-date flex-end" style={{ flex: "1",color: `${itemColor}` }}>{projectDates}</span>
         </h2>
         <p className="item-para">
           {navDes}

@@ -21,10 +21,13 @@
     color: #8c8c8c;
 }
 .item-date{
-    position: absolute;
-    right: 1rem;top: 10px;
     font-family :Helvetica, Helvetica, Arial, sans-serif;
     font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #8c8c8c;
+    box-sizing: border-box;
+    padding-right: 1rem;
 }
 .item-para{
     font-weight: 400;
