@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: minmax(0rem, 1fr) minmax(min-content, 1860px) minmax(0rem, 1fr);
     grid-template-rows: minmax(100vh, min-content);
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     padding-left: 2rem;
     padding-right: 2rem;
     grid-template-areas: ". home-container ."
@@ -15,7 +15,7 @@
     /* background-color: lightgray; */
     display: grid;
     grid-template-columns: 30% 70%;
-    grid-template-rows: 25vh minmax(75vh, min-content);
+    grid-template-rows: 150px minmax(85vh, min-content);
     grid-template-areas: "header header"
         "left-nav projectsContent";
 }
@@ -33,12 +33,13 @@
 .left-nav {
     grid-area: left-nav;
     height: 100%;
-    width: 29%;
+    width: 29.1%;
     border-right: 1px solid black;
     position: fixed;
-    top: 25vh;
-    /* overflow-y: auto; */
-    box-sizing: border-box;
+    top: 150px;
+    /* top: 15vh; */
+    left: 2rem;
+    /* box-sizing: border-box; */
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 75% 5%;

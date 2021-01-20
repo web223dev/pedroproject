@@ -1,26 +1,32 @@
 .nav-item-container-wrapper{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: minmax(50px,min-content);
+    grid-template-rows: minmax(40px,min-content);
     border-bottom: 1px solid black;
     position: relative;
     box-sizing: border-box;
     padding-right: 1rem;
-    padding-bottom: 1rem;
     font-family :Helvetica, Helvetica, Arial, sans-serif;
     font-feature-settings: "liga", "lnum";
-    /* font-size :15.64px; */
-    /* line-height: 2rem; */
 }
 .nav-item-container-wrapper:hover{
     color: lightgrey;
 }
+.item-heading{
+    display: flex;
+}
 .item-date{
     position: absolute;
-    right: 1rem;top: 15%;
-    font-size: 1.5rem;
+    right: 1rem;top: 10px;
     font-family :Helvetica, Helvetica, Arial, sans-serif;
     font-weight: 200;
+}
+.item-para{
+    /* position: absolute;
+    right: 1rem;
+    font-family :Helvetica, Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    top: 16%; */
 }
 .nav-item-container-wrapper p{
     /* font-size: 100px; */

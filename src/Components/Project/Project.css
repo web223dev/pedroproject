@@ -3,13 +3,12 @@
     grid-template-columns: 100%;
     grid-template-rows: minmax(80vh, min-content);
     border-bottom: 1px solid black;
-    box-sizing: border-box;
-    padding-left: 5%;
-    padding-bottom: 3%;
 }
 
 .project-container {
     display: grid;
+    padding-left: 4%;
+    padding-bottom: 3%;
     grid-template-columns: 60% 40%;
     font-family: Helvetica, Helvetica, Arial, sans-serif;
     grid-template-rows: 10vh minmax(70vh, min-content);
@@ -20,10 +19,12 @@
 .project-container-headings {
     grid-area: project-container-headings;
     position: sticky;
-    top: 17vh;
+    top: 112px;
     z-index: 3;
     display: flex;
-    /* background-color: red; */
+    align-items: flex-start;
+    box-sizing:border-box;
+    padding-top: 8px;
 }
 
 .project-heading {
@@ -61,12 +62,11 @@
     text-align: end;
     font-family: Helvetica, Helvetica, Arial, sans-serif;
     /* font-weight: 200; */
-    line-height: 15px;
-
+    /* line-height: 15px; */
 }
 
 .project-container-content-left-content p {
-    line-height: 23px;
+    /* line-height: 23px; */
 }
 
 .is-pinned {
