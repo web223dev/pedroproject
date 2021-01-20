@@ -17,36 +17,46 @@ function About() {
   // Fetching data from prismic
   const [doc, setDocData] = useState(null);
   const [aboutContent, setAboutContent] = useState(null);
-
+  const [contactIGLink, setcontactIGLink] = useState(null);
 
   useEffect(() => {
+    // Fetching projects
     const fetchData = async () => {
       client
         .query(Prismic.Predicates.at("document.type", "projects"))
         .then(function (res) {
           setDocData((prevState) => res.results);
         });
-        client
+      client
         .query(Prismic.Predicates.at("document.type", "about"))
         .then(function (res) {
-            setAboutContent((prevState)=>res.results[0].data)
+          setAboutContent((prevState) => res.results[0].data)
 
 
-        //   setDocData((prevState) => res.results[0].data.aboutdescription);
+          //   setDocData((prevState) => res.results[0].data.aboutdescription);
         });
 
 
-        // client.query(Prismic.Predicates.at("document.type", "projects"))
-        // .then(function (res) {
-        //     setAboutContent((prevState) => res.results);
-        //   console.log(aboutContent)
+      // client.query(Prismic.Predicates.at("document.type", "projects"))
+      // .then(function (res) {
+      //     setAboutContent((prevState) => res.results);
+      //   console.log(aboutContent)
 
-        // });
+      // });
     };
+    // Fetching contact link
+    const fetchContactLink = async () => {
+      client.query(
+        Prismic.Predicates.at('document.type', 'contactlink')
+      ).then(function (res) {
+        setcontactIGLink((prevState) => res.results[0].data)
+      });
+    }
+    fetchContactLink()
     fetchData();
   }, []);
 
-  
+
 
   return (
     <div className="about-container-wrapper">
@@ -55,8 +65,9 @@ function About() {
           <Header currentUrl={currentUrl} />
         </div>
         <div className="about-left-nav">
-          {doc
-            ? doc.map((project, index) => {
+          <div className="about-left-nav-items">
+            {doc
+              ? doc.map((project, index) => {
                 return (
                   <AboutLeftNav
                     currentUrl={currentUrl}
@@ -66,20 +77,28 @@ function About() {
                   />
                 );
               })
-            : null}
-          <h1 className="f1-5" style={{ color: "#8c8c8c" }}>
-            Contact me IG
-          </h1>
-        </div>
-        <div className="about-content">
-            <div className="aboutContentDiv">
+              : null}
+          </div>
+
+          <div className="about-left-nav-footer">
             {
-                aboutContent ?
-                <AboutContent aboutContent={aboutContent}/>
+              contactIGLink ?
+                <a href={contactIGLink.contactlink.url} target="_blank"><h1 className="f1-5 pointer" style={{ color: "#8c8c8c" }}>Contact me IG</h1></a>
                 :
                 null
             }
-            </div>
+          </div>
+
+        </div>
+        <div className="about-content">
+          <div className="aboutContentDiv">
+            {
+              aboutContent ?
+                <AboutContent aboutContent={aboutContent} />
+                :
+                null
+            }
+          </div>
         </div>
       </div>
     </div>

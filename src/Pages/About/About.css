@@ -9,7 +9,7 @@
 .about-container{
     grid-area: about-container;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 25% 75%;
     grid-template-rows: 150px 100fr;
     grid-template-areas: "about-header about-header"
                          "about-left-nav about-content";
@@ -21,6 +21,12 @@
 .about-left-nav{
     grid-area: about-left-nav;
     border-right: 1px solid black;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80% 20%;
+}
+.about-left-nav-items {
+    overflow-y: auto;
 }
 .about-content{
     grid-area: about-content;
