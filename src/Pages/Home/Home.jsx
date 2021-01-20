@@ -35,10 +35,8 @@ function Home(props) {
       client.query(
         Prismic.Predicates.at('document.type', 'projects')
     ).then(function(res) {
-        console.log(res.results)
         setDocData((prevState) => res.results)
     });
-
     }
     fetchData()
   }, [])

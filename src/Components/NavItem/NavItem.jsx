@@ -23,6 +23,7 @@ function NavItem(props) {
     else setitemColor("lightgrey");
     return () => {};
   }, [props.currentUrl]);
+  
   return (
     <ScrollableLink href={`/${props.project.title[0].text}`}>
       <div
