@@ -37,12 +37,13 @@
     border-right: 1px solid black;
     position: fixed;
     top: 150px;
+    /* bottom: 5%; */
     /* top: 15vh; */
     left: 2rem;
     /* box-sizing: border-box; */
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 75% 5%;
+    grid-template-rows: 69% 10%;
 }
 
 .left-nav-items {
@@ -56,27 +57,16 @@
 
 .left-nav-footer {
     display: flex;
-    align-items: center;
+    border-top: 1px solid black;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding-top: 1rem;
 }
 
 .projectsContent {
     grid-area: projectsContent;
 }
 
-.test {
-    position: sticky;
-    top: 14vh;
-}
-
-.home-container2 {
-    grid-area: home-container2;
-    background-color: lightgray;
-}
-
-.home-container3 {
-    grid-area: home-container3;
-    background-color: lightgray;
-}
 
 /* Responsivenss */
 @media screen and (max-width: 850px) {

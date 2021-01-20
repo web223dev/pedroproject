@@ -64,7 +64,7 @@ function Home(props) {
             } 
           </div>
           <div className="left-nav-footer">
-            <h1 className="mute-txt f1-5">Contact me IG</h1>
+            <h1 className="f1-5" style={{color:"#8c8c8c"}}>Contact me IG</h1>
           </div>
         </div>
         <div className="projectsContent" >
