@@ -1,7 +1,7 @@
 .about-container-wrapper{
     display: grid;
     grid-template-columns: minmax(0rem, 1fr) minmax(min-content, 1860px) minmax(0rem, 1fr);
-    grid-template-rows: 100vh;
+    grid-template-rows: minmax(100vh,min-content);
     padding-left: 2rem;
     padding-right: 2rem;
     grid-template-areas: ". about-container .";
@@ -24,4 +24,16 @@
 }
 .about-content{
     grid-area: about-content;
+    background-color: white;
+    display: grid;
+    grid-template-areas: "aboutContentDiv";
+}
+.aboutContentDiv{grid-area: aboutContentDiv; background-color: white; width: 550px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    /* font-family: Helvetica; */
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    padding-top: 15px;
 }

@@ -4,6 +4,7 @@ import "./About.css";
 import Prismic from "@prismicio/client";
 import { Date, Link, RichText } from "prismic-reactjs";
 import AboutLeftNav from "../../Components/AboutLeftNav/AboutLeftNav";
+import AboutContent from "../../Components/AboutContent/AboutContent";
 
 const apiEndpoint = "https://portfolio-pedro.cdn.prismic.io/api/v2";
 const accessToken =
@@ -15,6 +16,8 @@ function About() {
 
   // Fetching data from prismic
   const [doc, setDocData] = useState(null);
+  const [aboutContent, setAboutContent] = useState(null);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,9 +26,27 @@ function About() {
         .then(function (res) {
           setDocData((prevState) => res.results);
         });
+        client
+        .query(Prismic.Predicates.at("document.type", "about"))
+        .then(function (res) {
+            setAboutContent((prevState)=>res.results[0].data)
+
+
+        //   setDocData((prevState) => res.results[0].data.aboutdescription);
+        });
+
+
+        // client.query(Prismic.Predicates.at("document.type", "projects"))
+        // .then(function (res) {
+        //     setAboutContent((prevState) => res.results);
+        //   console.log(aboutContent)
+
+        // });
     };
     fetchData();
   }, []);
+
+  
 
   return (
     <div className="about-container-wrapper">
@@ -41,6 +62,7 @@ function About() {
                     currentUrl={currentUrl}
                     projectName={"Project1"}
                     project={project.data}
+                    key={index}
                   />
                 );
               })
@@ -49,7 +71,16 @@ function About() {
             Contact me IG
           </h1>
         </div>
-        <div className="about-content"></div>
+        <div className="about-content">
+            <div className="aboutContentDiv">
+            {
+                aboutContent ?
+                <AboutContent aboutContent={aboutContent}/>
+                :
+                null
+            }
+            </div>
+        </div>
       </div>
     </div>
   );
