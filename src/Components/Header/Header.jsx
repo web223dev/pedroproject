@@ -17,9 +17,9 @@ function Header(props) {
     return (
         <div className="header-container-wrapper flex-col-end">
             <div className="header-container">
-                <div className="f1-5 name fb pointer" onClick={goToTop} style={{color:`${nameColor}`}}>Pedro Damasceno</div>
-                <div className="f1-5 initiative mute-txt">Initiative</div>
-                <div className="f1-5 about mute-txt">About</div>
+                <div className="name fb pointer" onClick={goToTop} style={{color:`${nameColor}`}}>Pedro Damasceno</div>
+                <div className="initiative">Initiative</div>
+                <div className="about">About</div>
             </div>
         </div>
     )

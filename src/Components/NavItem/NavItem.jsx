@@ -20,7 +20,7 @@ function NavItem(props) {
           <span style={{ flex: "3" }}>{props.project.title[0].text}</span>
           <span style={{ flex: "1" }}>{props.project.projectdates}</span>
         </h2>
-        <p className="f1-3 item-para">
+        <p className="item-para">
           The garage opened in March 2018 . I managed to get paid in August.
           People repair their vehicles themselves and I accompany them. It is
           not...

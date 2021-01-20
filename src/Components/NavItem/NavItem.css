@@ -14,6 +14,11 @@
 }
 .item-heading{
     display: flex;
+    font-family :Helvetica, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    color: #8c8c8c;
 }
 .item-date{
     position: absolute;
@@ -22,6 +27,10 @@
     font-weight: 200;
 }
 .item-para{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+
     /* position: absolute;
     right: 1rem;
     font-family :Helvetica, Helvetica, Arial, sans-serif;

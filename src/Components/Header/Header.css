@@ -15,14 +15,26 @@
     top: 5%;
     left: 0;
     color: blue;
+    font-family :Helvetica, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
 }
 .initiative{
     position: absolute;
     bottom: 5%;
     left: 0;
+    line-height: 23px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #8c8c8c;
 }
 .about{
     position: absolute;    
     top: 5%;
     right: 0;
+    line-height: 23px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #8c8c8c;
 }

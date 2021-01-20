@@ -28,7 +28,7 @@ function Project(props) {
             >
               {props.project.title[0].text}
             </div>
-            <div className="f1-5 flex-end project-date mute-txt">
+            <div className="f1-5 flex-end project-date">
               {props.project.projectdates}
             </div>
           </div>
@@ -37,7 +37,7 @@ function Project(props) {
               <div className="project-container-content-left-img">
                 <ImageCarousel projectId={props.project.title[0].text} projectimages={props.project.projectimages}/>
               </div>
-              <div className="project-container-content-left-content f1-3">
+              <div className="project-container-content-left-content">
                 {
                   props.project.description.map((para,index)=>{
                     return(
