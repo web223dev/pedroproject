@@ -8,8 +8,6 @@ function Project(props) {
   const [itemColor, setitemColor] = useState("black");
   const [projectDates, setprojectDates] = useState("");
 
-
-
   useEffect(() => {
         // Setting date
         var d = new Date(props.project.timestamp);

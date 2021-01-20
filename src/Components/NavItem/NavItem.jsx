@@ -20,7 +20,7 @@ function NavItem(props) {
     setnavDes((prevState)=>`${localnavdes}...`)
     if (props.currentUrl === `/${props.project.title[0].text}`)
       setitemColor("blue");
-    else setitemColor("lightgrey");
+    else setitemColor("#8c8c8c");
     return () => {};
   }, [props.currentUrl]);
   
@@ -31,8 +31,8 @@ function NavItem(props) {
         style={{ color: `${itemColor}` }}
       >
         <h2 className="f1-5 item-heading">
-          <span style={{ flex: "5" }}>{props.project.title[0].text}</span>
-          <span style={{ flex: "1" }}>{projectDates}</span>
+          <span style={{ flex: "4",color: `${itemColor}` }}>{props.project.title[0].text}</span>
+          <span style={{ flex: "1",color: `${itemColor}` }}>{projectDates}</span>
         </h2>
         <p className="item-para">
           {navDes}
