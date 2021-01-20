@@ -43,6 +43,7 @@
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 95fr 5fr;
+    z-index: 3;
 }
 
 .left-nav-items {

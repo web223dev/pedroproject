@@ -80,13 +80,13 @@ function Home(props) {
           <div className="left-nav-footer bg-white">
             {
               contactIGLink ?
-                <a href={contactIGLink.contactlink.url} target="_blank" style={{flex:"1"}}><h1 className="f1-5 pointer" style={{ color: "#8c8c8c"}}>Contact me</h1></a>
+                <a className="bg-white" href={contactIGLink.contactlink.url} target="_blank" style={{flex:"1"}}><h1 className="f1-5 pointer bg-white" style={{ color: "#8c8c8c"}}>Contact me</h1></a>
                 :
                 null
             }
             {
               contactIGLink ?
-                <a href={contactIGLink.contactlink.url} target="_blank" style={{flex:"2"}}><h1 className="f1-5 pointer" style={{ color: "#8c8c8c"}}>IG</h1></a>
+                <a className="bg-white" href={contactIGLink.contactlink.url} target="_blank" style={{flex:"2"}}><h1 className="f1-5 pointer bg-white" style={{ color: "#8c8c8c"}}>IG</h1></a>
                 :
                 null
             }

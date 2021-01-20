@@ -5,9 +5,9 @@
     border-bottom: 1px solid black;
     position: relative;
     box-sizing: border-box;
-    /* padding-right: 1rem; */
     font-family :Helvetica, Helvetica, Arial, sans-serif;
     font-feature-settings: "liga", "lnum";
+    background-color: white;
 }
 .nav-item-container-wrapper:hover{
     color: lightgrey;
