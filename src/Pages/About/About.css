@@ -1,0 +1,27 @@
+.about-container-wrapper{
+    display: grid;
+    grid-template-columns: minmax(0rem, 1fr) minmax(min-content, 1860px) minmax(0rem, 1fr);
+    grid-template-rows: 100vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    grid-template-areas: ". about-container .";
+}
+.about-container{
+    grid-area: about-container;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 150px 100fr;
+    grid-template-areas: "about-header about-header"
+                         "about-left-nav about-content";
+}
+.about-header{
+    grid-area: about-header;
+    border-bottom: 1px solid black;
+}
+.about-left-nav{
+    grid-area: about-left-nav;
+    border-right: 1px solid black;
+}
+.about-content{
+    grid-area: about-content;
+}

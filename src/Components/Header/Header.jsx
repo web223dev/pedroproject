@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Header.css'
 import { goToTop } from 'react-update-url-on-scroll'
+import { Link } from 'react-router-dom'
 
 function Header(props) {
     const [nameColor, setnameColor] = useState('blue')
@@ -19,7 +20,9 @@ function Header(props) {
             <div className="header-container">
                 <div className="name fb pointer" onClick={goToTop} style={{color:`${nameColor}`}}>Pedro Damasceno</div>
                 <div className="initiative">Initiative</div>
+                <Link to="/about">
                 <div className="about">About</div>
+                </Link>
             </div>
         </div>
     )
