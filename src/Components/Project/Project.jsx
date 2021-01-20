@@ -6,11 +6,14 @@ import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
 function Project(props) {
   const [itemColor, setitemColor] = useState("black");
-
+  const [projectDates, setprojectDates] = useState("");
 
 
 
   useEffect(() => {
+        // Setting date
+        var d = new Date(props.project.timestamp);
+        setprojectDates((prevState)=>(d.getMonth()+1) + '/' + d.getFullYear())
     if (props.currentUrl === `/${props.project.title[0].text}`) setitemColor("blue");
     else setitemColor("black");
     return () => {
@@ -29,7 +32,7 @@ function Project(props) {
               {props.project.title[0].text}
             </div>
             <div className="f1-5 flex-end project-date">
-              {props.project.projectdates}
+              {projectDates}
             </div>
           </div>
           <div className="project-container-content-div">

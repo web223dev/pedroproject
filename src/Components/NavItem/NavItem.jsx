@@ -4,7 +4,20 @@ import ScrollableSection, { ScrollableLink } from "react-update-url-on-scroll";
 import "./NavItem.css";
 function NavItem(props) {
   const [itemColor, setitemColor] = useState("lightgrey");
+  const [navDes, setnavDes] = useState("");
+  const [projectDates, setprojectDates] = useState("");
+
   useEffect(() => {
+    // Setting date
+    var d = new Date(props.project.timestamp);
+    setprojectDates((prevState)=>(d.getMonth()+1) + '/' + d.getFullYear())
+
+    var localnavdes=""
+    for(let i =0 ;i<110;i++)
+    {
+      localnavdes+=props.project.navbardescription[0].text[i]
+    }
+    setnavDes((prevState)=>`${localnavdes}...`)
     if (props.currentUrl === `/${props.project.title[0].text}`)
       setitemColor("blue");
     else setitemColor("lightgrey");
@@ -18,12 +31,10 @@ function NavItem(props) {
       >
         <h2 className="f1-5 item-heading">
           <span style={{ flex: "3" }}>{props.project.title[0].text}</span>
-          <span style={{ flex: "1" }}>{props.project.projectdates}</span>
+          <span style={{ flex: "1" }}>{projectDates}</span>
         </h2>
         <p className="item-para">
-          The garage opened in March 2018 . I managed to get paid in August.
-          People repair their vehicles themselves and I accompany them. It is
-          not...
+          {navDes}
         </p>
         {/* <h2 className="item-date f1-5 fb">{props.project.projectdates}</h2> */}
       </div>

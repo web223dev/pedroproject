@@ -32,9 +32,13 @@ function Home(props) {
 
   useEffect(() => {
     const fetchData = async () => {
-      client.query('').then(res => {
+      client.query(
+        Prismic.Predicates.at('document.type', 'projects')
+    ).then(function(res) {
+        console.log(res.results)
         setDocData((prevState) => res.results)
-      })
+    });
+
     }
     fetchData()
   }, [])
