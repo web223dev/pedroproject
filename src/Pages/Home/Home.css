@@ -14,7 +14,7 @@
     grid-area: home-container;
     /* background-color: lightgray; */
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 25% 65%;
     grid-template-rows: 150px minmax(85vh, min-content);
     grid-template-areas: "header header"
         "left-nav projectsContent";
@@ -33,7 +33,7 @@
 .left-nav {
     grid-area: left-nav;
     height: 100%;
-    width: 29.1%;
+    width: 25%;
     border-right: 1px solid black;
     position: fixed;
     top: 150px;
