@@ -5,6 +5,8 @@ import Prismic from "@prismicio/client";
 import { Date, Link, RichText } from "prismic-reactjs";
 import AboutLeftNav from "../../Components/AboutLeftNav/AboutLeftNav";
 import AboutContent from "../../Components/AboutContent/AboutContent";
+import MobileNavItem from "../../Components/MobileNavItem/MobileNavItem"
+
 
 const apiEndpoint = "https://portfolio-pedro.cdn.prismic.io/api/v2";
 const accessToken =
@@ -61,6 +63,8 @@ function About() {
   return (
     <div className="about-container-wrapper">
       <div className="about-container">
+
+        
         <div className="about-header">
           <Header currentUrl={currentUrl} />
         </div>
@@ -100,6 +104,21 @@ function About() {
             }
           </div>
         </div>
+
+        <div className="aboutMobileNav">
+        {doc ?
+          doc.map((project, index) => {
+            return (
+              <MobileNavItem project={project.data} />
+            )
+          })
+          :
+          null
+      
+        }
+
+        </div>
+
       </div>
     </div>
   );

@@ -3,6 +3,7 @@
     grid-template-columns: minmax(0rem, 1fr) minmax(min-content, 1860px) minmax(0rem, 1fr);
     grid-template-rows: minmax(100vh, min-content);
     /* box-sizing: border-box; */
+    /* position: relative; */
     padding-left: 2rem;
     padding-right: 2rem;
     grid-template-areas: ". home-container ."
@@ -49,11 +50,7 @@
 .left-nav-items {
     overflow-y: auto;
     color: lightgrey;
-    /* position: absolute; */
-    /* top: 150px; */
-    /* bottom: 10%; */
     z-index: 1;
-    /* background-color: blue; */
 }
 
 .left-nav-items:hover {
@@ -76,32 +73,36 @@
     grid-area: projectsContent;
 }
 
+/* .mobileNav{
+    position: absolute;
+    background-color: aquamarine;
+    height: 20px;
+    width: 20px;
+} */
+
 
 /* Responsivenss */
 @media screen and (max-width: 850px) {
     .home-container {
         grid-area: home-container;
-        /* background-color: lightgray; */
+        position: relative;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 20vh minmax(80vh, min-content);
         grid-template-areas: "header"
-            "left-nav";
+                            "mobileView";
     }
     .left-nav {
         grid-area: left-nav;
-        height: 100%;
-        width: 100%;
-        border-right: 1px solid black;
-        position: fixed;
-        top: 20vh;
-        /* overflow-y: auto; */
-        box-sizing: border-box;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 75% 5%;
+        display: none;
     }
     .projectsContent{
         display: none;
+    } 
+    .mobileNav{
+        position: absolute;
+        grid-area: mobileView;
+        height: 100%;
+        width: 100%;
     }
 }
