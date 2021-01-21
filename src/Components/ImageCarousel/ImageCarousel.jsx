@@ -20,7 +20,7 @@ function ImageCarousel(props) {
           <div class="carousel-item active">
             <img
               class="d-block"
-              style={{ width: "100%", height: "300px", objectFit: "fill" }}
+              style={{ width: "100%", height: "440px", objectFit: "fill" }}
               src={props.projectimages.url}
               alt="First slide"
             />
@@ -28,7 +28,7 @@ function ImageCarousel(props) {
             <div class="carousel-item">
             <img
               class="d-block"
-              style={{ width: "100%", height: "300px", objectFit: "fill" }}
+              style={{ width: "100%", height: "440px", objectFit: "fill" }}
               src={props.projectimages.second.url}
               alt="Second slide"
             />
@@ -37,7 +37,7 @@ function ImageCarousel(props) {
           <div class="carousel-item">
             <img
               class="d-block"
-              style={{ width: "100%", height: "300px", objectFit: "fill" }}
+              style={{ width: "100%", height: "440px", objectFit: "fill" }}
               src={props.projectimages.third.url}
               alt="Third slide"
             />

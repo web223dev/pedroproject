@@ -52,8 +52,13 @@ function MobileProject(props) {
               <div className="mobile-project-container-content-left-content">
                 {
                   props.project.description.map((para,index)=>{
+                    if(para.spans.length>0)
+                      return(
+                        <p style={{fontWeight:"700"}} key={index} className={para.type}>{para.text}</p>
+                      )
+                    else 
                     return(
-                      <p key={index} className={para.type}>{para.text}</p>
+                      <p style={{fontWeight:"400"}} key={index} className={para.type}>{para.text}</p>
                     )
                   })
                 }
