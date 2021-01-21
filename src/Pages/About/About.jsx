@@ -87,7 +87,13 @@ function About() {
           <div className="about-left-nav-footer">
             {
               contactIGLink ?
-                <a href={contactIGLink.contactlink.url} target="_blank"><h1 className="f1-5 pointer" style={{ color: "#8c8c8c" }}>Contact me IG</h1></a>
+                <a href={contactIGLink.contactlink.url} target="_blank"><h1 className="f1-5 pointer contactz" style={{ color: "#8c8c8c" }}>Contact me</h1></a>
+                :
+                null
+            }
+            {
+              contactIGLink ?
+                <a className="flex-end"href={contactIGLink.contactlink.url} target="_blank"><h1 className="f1-5 pointer IGz" style={{ color: "#8c8c8c",marginRight:"10%" }}>IG</h1></a>
                 :
                 null
             }
