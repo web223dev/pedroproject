@@ -98,13 +98,13 @@ function Home(props) {
           <div className="left-nav-footer bg-white">
             {
               contactIGLink ?
-                <a className="bg-white" style={{flex:"1"}} href={contactIGLink.contactlink.url} target="_blank"><h1 className="f1-5 pointer bg-white contactMe" style={{ color: "#8c8c8c"}}>Contact me</h1></a>
+                <a className="bg-white" style={{flex:"1"}} href={contactIGLink.contactlink.url} target="_blank"><h1 className="pointer bg-white contactMe" style={{ color: "#8c8c8c"}}>Contact me</h1></a>
                 :
                 null
             }
             {
               contactIGLink ?
-                <a className="bg-white flex-end" style={{flex:"1",paddingRight:"2.5rem"}} href={contactIGLink.contactlink.url} target="_blank"><h1 className="f1-5 pointer bg-white instagram" style={{ color: "#8c8c8c"}}>IG</h1></a>
+                <a className="bg-white flex-end" style={{flex:"1",paddingRight:"2.5rem"}} href={contactIGLink.contactlink.url} target="_blank"><h1 className="pointer bg-white instagram" style={{ color: "#8c8c8c"}}>IG</h1></a>
                 :
                 null
             }
