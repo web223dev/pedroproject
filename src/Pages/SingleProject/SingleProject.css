@@ -1,0 +1,23 @@
+.singleproject-page-wrappper{
+    display: grid;
+    grid-template-columns: minmax(0rem, 1fr) minmax(min-content, 1860px) minmax(0rem, 1fr);
+    padding-right: 2rem;
+    padding-left: 2rem;
+    background-color: white;
+    box-sizing: border-box;
+    grid-template-rows: minmax(25vh,min-content) minmax(80vh,min-content);
+    grid-template-areas: ". header ."
+                    ". projectContent .";
+    
+}
+.singleproject-header{
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 3;
+    background-color: white;
+}
+.singleproject-Content{
+    grid-area: projectContent;
+}

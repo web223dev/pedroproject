@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
-// import ScrollableSection, { ScrollableLink } from "react-update-url-on-scroll";
 import Header from "../../Components/Header/Header";
 import NavItem from "../../Components/NavItem/NavItem";
 import Project from "../../Components/Project/Project";
@@ -74,7 +73,7 @@ function Home(props) {
           doc ?
           doc.map((project, index) => {
             return (
-              <NavItem project={project.data} />
+              <MobileNavItem project={project.data} />
             )
           })
           :

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { withRouter } from "react-router-dom";
 import "./MobileNavItem.css";
 
 const MobileNavItem = (props) => {
@@ -17,9 +18,11 @@ const MobileNavItem = (props) => {
       setnavDes((prevState)=>`${localnavdes}...`)
       return () => {};
     }, []);
-    
+    const handleRedirection = (route) =>{
+      props.history.push(`/projects/${route}`)
+    }    
     return (
-        <div className="mobile-nav-item-container-wrapper flex-col pointer">
+        <div className="mobile-nav-item-container-wrapper flex-col pointer" onClick={(e)=>{handleRedirection(props.project.title[0].text)}}>
         <h2 className="f1-5 mobile-item-heading">
           <span style={{ flex: "5" }}>{props.project.title[0].text}</span>
           <span style={{ flex: "1" }}>{projectDates}</span>
@@ -32,4 +35,4 @@ const MobileNavItem = (props) => {
     );
 }
 
-export default MobileNavItem
+export default withRouter(MobileNavItem)
