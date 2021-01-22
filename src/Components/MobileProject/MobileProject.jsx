@@ -33,9 +33,9 @@ function MobileProject(props) {
   return (
       <div className="mobile-project-container-wrapper">
         <div className="mobile-project-container">
-          <div className="mobile-project-container-headings f1-5">
+          <div className="mobile-project-container-headings">
             <div
-              className="f1-5 flex-start mobile-project-heading fb"
+              className="flex-start mobile-project-heading"
               style={{ color: `${itemColor}` }}
             >
               {props.project.title[0].text}
