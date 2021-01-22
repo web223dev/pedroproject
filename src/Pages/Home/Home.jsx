@@ -19,9 +19,9 @@ function Home(props) {
 
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
-    setTimeout(() => {
+    // setTimeout(() => {
       listenScrollEvent()
-    }, 500);
+    // }, 500);
     return () => {
       // cleanup
     }
@@ -53,9 +53,8 @@ function Home(props) {
   }, [])
 
   const listenScrollEvent = () => {
-    // console.log(window.location.pathname)
-
-    setcurrentUrl((prevState) => window.location.pathname)
+    // console.log(window.location.pathname.replace("%"," "))
+    setcurrentUrl((prevState) => window.location.pathname.replaceAll("%20"," "))
   }
   
   return (
@@ -132,7 +131,7 @@ function Home(props) {
             doc ?
               doc.map((project, index) => {
                 return (
-                  <Project key={index} currentUrl={currentUrl} urlName={"Project1"} projectName={"Project1"} project={project.data} />
+                  <Project key={index} currentUrl={currentUrl}  project={project.data} />
                 )
               })
               :
