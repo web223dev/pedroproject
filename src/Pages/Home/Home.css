@@ -1,6 +1,6 @@
 .home-wrapper-container {
     display: grid;
-    grid-template-columns: minmax(0rem, 1fr) minmax(min-content, 1860px) minmax(0rem, 1fr);
+    grid-template-columns: minmax(0rem, 1fr) minmax(min-content, 1920px) minmax(0rem, 1fr);
     grid-template-rows: minmax(100vh, min-content);
     /* box-sizing: border-box; */
     /* position: relative; */
@@ -15,7 +15,8 @@
     grid-area: home-container;
     /* background-color: lightgray; */
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 350px minmax(min-content,1570px);
+    /* grid-template-columns: 30% 70fr; */
     grid-template-rows: 150px minmax(85vh, min-content);
     grid-template-areas: "header header"
         "left-nav projectsContent";
@@ -34,7 +35,9 @@
 .left-nav {
     grid-area: left-nav;
     height: 100fr;
-    width: 25%;
+    /* width: 350px; */
+    width: 350px;
+    /* width: 30%; */
     border-right: 1px solid black;
     position: fixed;
     top: 150px;
@@ -77,6 +80,7 @@
 
 .projectsContent {
     grid-area: projectsContent;
+    /* background-color: brown; */
 }
 
 .mobileNav{
