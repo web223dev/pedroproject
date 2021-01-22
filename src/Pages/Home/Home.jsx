@@ -68,6 +68,7 @@ function Home(props) {
 
 
       <div className="mobileNav">
+        <div className="mobile-nav-items">
         {
           
           doc ?
@@ -80,6 +81,22 @@ function Home(props) {
           null
       
         }
+        </div>
+
+        <div className="mobile-nav-footer">
+        {
+              contactIGLink ?
+                <a className="bg-white" style={{flex:"1"}} href={contactIGLink.contactlink.url} target="_blank"><h1 className="pointer bg-white" style={{ color: "#8c8c8c",fontSize:"16px"}}>Contact me</h1></a>
+                :
+                null
+            }
+            {
+              contactIGLink ?
+                <a className="bg-white flex-col-start" style={{flex:"1",alignItems:"flex-end"}} href={contactIGLink.contactlink.url} target="_blank"><h1 className="pointer bg-white" style={{ color: "#8c8c8c",fontSize:"16px"}}>IG</h1></a>
+                :
+                null
+            }
+        </div>
       </div>
 
         <div className="left-nav">

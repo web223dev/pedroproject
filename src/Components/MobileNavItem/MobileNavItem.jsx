@@ -25,7 +25,7 @@ const MobileNavItem = (props) => {
         <div className="mobile-nav-item-container-wrapper flex-col pointer" onClick={(e)=>{handleRedirection(props.project.title[0].text)}}>
         <h2 className="f1-5 mobile-item-heading">
           <span style={{ flex: "5" }}>{props.project.title[0].text}</span>
-          <span style={{ flex: "1" }}>{projectDates}</span>
+          <span style={{ flex: "1" }} className="mobile-item-date flex-end">{projectDates}</span>
         </h2>
         <p className="mobile-item-para">
         {navDes}

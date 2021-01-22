@@ -1,12 +1,11 @@
 .mobile-nav-item-container-wrapper{
-    color: #8c8c8c;
+    /* color: #8c8c8c; */
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: minmax(40px,min-content);
     border-bottom: 1px solid black;
     position: relative;
     box-sizing: border-box;
-    padding-right: 1rem;
     font-family :Helvetica, Helvetica, Arial, sans-serif;
     font-feature-settings: "liga", "lnum";
 }
@@ -23,10 +22,9 @@
     /* color: black; */
 }
 .mobile-item-date{
-    position: absolute;
-    right: 1rem;top: 10px;
     font-family :Helvetica, Helvetica, Arial, sans-serif;
-    font-weight: 200;
+    font-weight: 400;
+    color: #8c8c8c;
 }
 .mobile-item-para{
     font-weight: 400;
