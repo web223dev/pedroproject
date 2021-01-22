@@ -13,7 +13,7 @@ function NavItem(props) {
     setprojectDates((prevState)=>(d.getMonth()+1) + '.' + d.getFullYear())
 
     var localnavdes=""
-    for(let i =0 ;i<110;i++)
+    for(let i =0 ;i<120;i++)
     {
       localnavdes+=props.project.navbardescription[0].text[i]
     }
