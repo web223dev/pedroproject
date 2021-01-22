@@ -13,6 +13,8 @@
     color: lightgrey;
 }
 .item-heading{
+    box-sizing: border-box;
+    padding-top: 0.5rem;
     display: flex;
     font-family :Helvetica, Helvetica, Arial, sans-serif;
     font-weight: 700;

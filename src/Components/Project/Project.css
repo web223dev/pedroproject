@@ -9,7 +9,7 @@
     display: grid;
     padding-left: 4%;
     padding-bottom: 3%;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 70% 30%;
     font-family: Helvetica, Helvetica, Arial, sans-serif;
     grid-template-rows: 10vh minmax(70vh, min-content);
     grid-template-areas: "project-container-headings project-container-headings"
@@ -84,7 +84,7 @@
     color: red;
   }
 /* Responsiveness */
-@media screen and (max-width: 1900px) {
+@media screen and (max-width: 1920px) {
     .project-container-content-div{
         width: 550px;
     }
