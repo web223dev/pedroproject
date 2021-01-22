@@ -50,7 +50,7 @@ function Project(props) {
           <div className="project-container-content-div">
             <div className="project-container-content-left">
               <div className="project-container-content-left-img">
-                <ImageCarousel projectId={props.project.title[0].text} projectimages={props.project.projectimages}/>
+                <ImageCarousel Size={{width:"550px",height:"440px"}} projectId={props.project.title[0].text} projectimages={props.project.projectimages}/>
               </div>
               <div className="project-container-content-left-content">
                 {

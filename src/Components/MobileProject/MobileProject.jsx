@@ -44,10 +44,9 @@ function MobileProject(props) {
               {projectDates}
             </div>
           </div>
-          <div className="mobile-project-container-content-div">
             <div className="mobile-project-container-content-left">
               <div className="mobile-project-container-content-left-img">
-                <ImageCarousel projectId={props.project.title[0].text} projectimages={props.project.projectimages}/>
+                <ImageCarousel Size={{width:"300px",height:"300px"}} projectId={props.project.title[0].text} projectimages={props.project.projectimages}/>
               </div>
               <div className="mobile-project-container-content-left-content">
                 {
@@ -64,10 +63,10 @@ function MobileProject(props) {
                 }
               </div>
             </div>
-          </div>
         </div>
       </div>
   );
 }
 
 export default MobileProject;
+

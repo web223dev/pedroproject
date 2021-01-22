@@ -13,7 +13,7 @@
     font-family: Helvetica, Helvetica, Arial, sans-serif;
     grid-template-rows: 10vh minmax(70vh, min-content);
     grid-template-areas: "mobile-project-container-headings mobile-project-container-headings"
-        "mobile-project-container-content-left .";
+        "mobile-project-container-content-left mobile-project-container-content-left";
 }
 
 .mobile-project-container-headings {

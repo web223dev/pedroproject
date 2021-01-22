@@ -1,13 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import sstatic from "./Assets/sstatic.PNG";
 import ScrollableSection, { ScrollableLink } from "react-update-url-on-scroll";
 
 function ImageCarousel(props) {
-  useEffect(() => {
-    
-    return () => {
-    }
-  }, [])
+  
   return (
     <ScrollableSection name={props.projectId}>
       <div
@@ -20,7 +16,7 @@ function ImageCarousel(props) {
           <div class="carousel-item active">
             <img
               class="d-block"
-              style={{ width: "100%", height: "440px", objectFit: "fill" }}
+              style={{ width: `${props.Size.width}`, height: `${props.Size.height}`, objectFit: "fill" }}
               src={props.projectimages.url}
               alt="First slide"
             />
@@ -28,7 +24,7 @@ function ImageCarousel(props) {
             <div class="carousel-item">
             <img
               class="d-block"
-              style={{ width: "100%", height: "440px", objectFit: "fill" }}
+              style={{ width: `${props.Size.width}`, height: `${props.Size.height}`, objectFit: "fill" }}
               src={props.projectimages.second.url}
               alt="Second slide"
             />
@@ -37,7 +33,7 @@ function ImageCarousel(props) {
           <div class="carousel-item">
             <img
               class="d-block"
-              style={{ width: "100%", height: "440px", objectFit: "fill" }}
+              style={{ width: `${props.Size.width}`, height: `${props.Size.height}`, objectFit: "fill" }}
               src={props.projectimages.third.url}
               alt="Third slide"
             />
