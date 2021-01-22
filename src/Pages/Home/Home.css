@@ -92,7 +92,7 @@
 
 /* Responsivenss */
 @media screen and (max-width: 850px) {
-    .home-container {
+    /* .home-container {
         grid-area: home-container;
         position: relative;
         display: grid;
@@ -100,7 +100,17 @@
         grid-template-rows: 20vh minmax(80vh, min-content);
         grid-template-areas: "header"
                             "mobileView";
+    } */
+    .home-container {
+        grid-area: home-container;
+        /* background-color: lightgray; */
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20vh minmax(80vh, min-content);
+        grid-template-areas: "header"
+            "mobileView";
     }
+    
     .left-nav {
         grid-area: left-nav;
         display: none;
@@ -109,11 +119,14 @@
         display: none;
     } 
     .mobileNav{
-        position: absolute;
+        /* position: absolute; */
         grid-area: mobileView;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 95fr 5fr;
+    }
+    .mobile-nav-items{
+        /* background-color: cadetblue; */
     }
     .mobile-nav-footer{
         display: flex;

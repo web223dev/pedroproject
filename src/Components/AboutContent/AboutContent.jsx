@@ -7,17 +7,15 @@ const AboutContent = (props) => {
 
 
     useEffect(() => {
-        console.log()
         var paragraphArr = props.aboutContent.aboutdescription;
 
         var link1 = props.aboutContent.link1;
         var link2 = props.aboutContent.link2;
         var link3 = props.aboutContent.link3;
 
-        console.log(props.aboutContent)
         setParagraph(paragraphArr)
         return () => {
-            console.log("CMD")
+            // console.log("CMD")
         }
     }, [])
 
