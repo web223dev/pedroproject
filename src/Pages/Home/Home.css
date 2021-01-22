@@ -45,12 +45,14 @@
     grid-template-columns: 100%;
     grid-template-rows: 95fr 5fr;
     z-index: 3;
+    overflow-x: hidden;
 }
 
 .left-nav-items {
     overflow-y: auto;
     color: lightgrey;
     z-index: 1;
+    overflow-x: hidden;
 }
 
 .left-nav-items:hover {
@@ -65,10 +67,11 @@
     padding-top: 1rem;
     z-index: 3;
     font-weight: 400;
-    font-size: 16px;
     line-height: 23px;
     background-color: aqua;
     font-family: Helvetica, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+
     /* position: relative; */
 }
 
