@@ -3,7 +3,6 @@ import sstatic from "./Assets/sstatic.PNG";
 import ScrollableSection, { ScrollableLink } from "react-update-url-on-scroll";
 
 function ImageCarousel(props) {
-  
   return (
     <ScrollableSection name={props.projectId}>
       <div

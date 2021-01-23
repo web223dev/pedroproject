@@ -20,7 +20,8 @@ function NavItem(props) {
     setnavDes((prevState)=>`${localnavdes}...`)
     if (props.currentUrl === `/${props.project.title[0].text}`)
       setitemColor("blue");
-    else setitemColor("#8c8c8c");
+    else setitemColor("black");
+    // else setitemColor("#8c8c8c");
     return () => {};
   }, [props.currentUrl]);
   

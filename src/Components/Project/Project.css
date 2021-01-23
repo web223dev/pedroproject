@@ -1,7 +1,7 @@
 .project-container-wrapper {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: minmax(80vh, min-content);
+    grid-template-rows: minmax(60vh, min-content);
     border-bottom: 1px solid black;
 }
 
@@ -11,7 +11,7 @@
     padding-bottom: 3%;
     grid-template-columns: 70% 30%;
     font-family: Helvetica, Helvetica, Arial, sans-serif;
-    grid-template-rows: 10vh minmax(70vh, min-content);
+    grid-template-rows: 10vh minmax(60vh, min-content);
     grid-template-areas: "project-container-headings project-container-headings"
         "project-container-content-left .";
 }
@@ -48,7 +48,7 @@
     grid-area: project-container-content-left;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: minmax(20vh,min-content) minmax(80vh, min-content);
+    grid-template-rows: minmax(20vh,min-content) minmax(40vh, min-content);
 }
 
 .project-container-content-left-img {

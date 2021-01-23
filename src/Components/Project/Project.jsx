@@ -33,7 +33,7 @@ function Project(props) {
   }, [props.currentUrl]);
   const listenScrollEvent = () => { };
   return (
-    <ScrollableSection name={props.project.title[0].text}>
+    <ScrollableSection name={props.project.title[0].text} >
       <div className="project-container-wrapper">
         <div className="project-container">
           <div className="project-container-headings f1-5">
