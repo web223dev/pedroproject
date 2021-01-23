@@ -11,7 +11,7 @@
     padding-bottom: 3%;
     grid-template-columns: 60% 40%;
     font-family: Helvetica, Helvetica, Arial, sans-serif;
-    grid-template-rows: 10vh minmax(70vh, min-content);
+    grid-template-rows: 20vh minmax(70vh, min-content);
     grid-template-areas: "mobile-project-container-headings mobile-project-container-headings"
         "mobile-project-container-content-left mobile-project-container-content-left";
 }
@@ -19,7 +19,7 @@
 .mobile-project-container-headings {
     grid-area: mobile-project-container-headings;
     position: sticky;
-    top: 17vh;
+    top: 15vh;
     z-index: 3;
     display: flex;
     align-items: flex-start;

@@ -18,10 +18,14 @@ function Home(props) {
   const [contactIGLink, setcontactIGLink] = useState(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
-    // setTimeout(() => {
-      listenScrollEvent()
-    // }, 500);
+    window.matchMedia("(min-width:850px)")
+    {
+      window.addEventListener("scroll", listenScrollEvent);
+      // setTimeout(() => {
+        listenScrollEvent()
+      // }, 500);
+    }
+
     return () => {
       // cleanup
     }
