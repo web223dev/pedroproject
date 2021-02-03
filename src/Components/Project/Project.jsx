@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./Project.css";
 import sstatic from "./Assets/sstatic.PNG";
 import ScrollableSection, { ScrollableLink } from "react-update-url-on-scroll";
@@ -12,29 +12,29 @@ const accessToken =
   "MC5ZQWM0NWhNQUFDWUFyN1RG.77-9O--_ve-_ve-_ve-_ve-_ve-_vQ3vv73vv73vv73vv73vv71Y77-9Be-_vSEBMe-_vU_vv73vv73vv71-bu-_ve-_ve-_vQQ";
 const client = Prismic.client(apiEndpoint, { accessToken });
 
-
-
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)   
+// General scroll to element function
 
 function Project(props) {
+  const myRef = useRef(null)
+  const executeScroll = () => scrollToRef(myRef)
+
   const [itemColor, setitemColor] = useState("black");
   const [projectDates, setprojectDates] = useState("");
 
-
-  
   useEffect(() => {
         // Setting date
         var d = new Date(props.project.timestamp);
         setprojectDates((prevState)=>(d.getMonth()+1) + '.' + d.getFullYear())
-    if (props.currentUrl === `/${props.project.title[0].text}`) setitemColor("blue");
+    if (props.currentUrl === `${props.project.title[0].text}`) setitemColor("blue");
     else setitemColor("black");
 
     return () => {
     };
   }, [props.currentUrl]);
-  const listenScrollEvent = () => { };
   return (
-    <ScrollableSection name={props.project.title[0].text} >
-      <div className="project-container-wrapper">
+    // <ScrollableSection name={props.project.title[0].text} >
+      <div className="project-container-wrapper" id={props.project.title[0].text}>
         <div className="project-container">
           <div className="project-container-headings f1-5">
             <div
@@ -76,7 +76,7 @@ function Project(props) {
          */}
         </div>
       </div>
-    </ScrollableSection>
+    // </ScrollableSection>
   );
 }
 

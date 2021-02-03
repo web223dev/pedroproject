@@ -14,6 +14,7 @@ const client = Prismic.client(apiEndpoint, { accessToken })
 
 
 function Home(props) {
+  // console.log(window.location.hash)
   const [currentUrl, setcurrentUrl] = useState('/')
   const [contactIGLink, setcontactIGLink] = useState(null);
 
@@ -21,15 +22,22 @@ function Home(props) {
     window.matchMedia("(min-width:850px)")
     {
       window.addEventListener("scroll", listenScrollEvent);
-      // setTimeout(() => {
-        listenScrollEvent()
-      // }, 500);
     }
 
     return () => {
       // cleanup
     }
-  }, [window.location.pathname])
+  }, [])
+  useEffect(() => {
+    window.matchMedia("(min-width:850px)")
+    {
+      listenScrollEvent()
+    }
+
+    return () => {
+      // cleanup
+    }
+  }, [window.location.hash])
 
   // Fetching data from prismic
   const [doc, setDocData] = useState(null)
@@ -57,8 +65,8 @@ function Home(props) {
   }, [])
 
   const listenScrollEvent = () => {
-    // console.log(window.location.pathname.replace("%"," "))
-    setcurrentUrl((prevState) => window.location.pathname.replaceAll("%20"," "))
+    const withoutHash = window.location.hash.replaceAll("#","")
+    setcurrentUrl((prevState) => withoutHash.replaceAll("%20"," "))
   }
   
   return (

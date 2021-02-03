@@ -53,7 +53,7 @@
 
 .left-nav-items {
     overflow-y: auto;
-    color: lightgrey;
+    /* color: lightgrey; */
     z-index: 1;
     overflow-x: hidden;
 }

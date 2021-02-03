@@ -10,7 +10,7 @@
     background-color: white;
 }
 .nav-item-container-wrapper:hover{
-    color: lightgrey;
+    /* color: lightgrey; */
 }
 .item-heading{
     box-sizing: border-box;
@@ -20,14 +20,14 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 23px;
-    color: #8c8c8c;
+    /* color: #8c8c8c; */
 }
 .item-date{
     font-family :Helvetica, Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 23px;
-    color: #8c8c8c;
+    /* color: #8c8c8c; */
     box-sizing: border-box;
     padding-right: 1rem;
 }
@@ -52,4 +52,7 @@
 
 .nav-item-container-wrapper h2{
 
+}
+.active{
+    color: red;
 }
