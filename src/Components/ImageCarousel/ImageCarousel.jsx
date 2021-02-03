@@ -6,7 +6,7 @@ function ImageCarousel(props) {
   return (
     // <ScrollableSection name={props.projectId}>
       <div
-        // id={props.projectId}
+        id={props.projectId}
         class="carousel slide"
         data-ride="carousel"
         data-interval={false}

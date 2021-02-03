@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import "./Project.css";
 import sstatic from "./Assets/sstatic.PNG";
 import ScrollableSection, { ScrollableLink } from "react-update-url-on-scroll";
@@ -12,12 +12,8 @@ const accessToken =
   "MC5ZQWM0NWhNQUFDWUFyN1RG.77-9O--_ve-_ve-_ve-_ve-_ve-_vQ3vv73vv73vv73vv73vv71Y77-9Be-_vSEBMe-_vU_vv73vv73vv71-bu-_ve-_ve-_vQQ";
 const client = Prismic.client(apiEndpoint, { accessToken });
 
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)   
-// General scroll to element function
 
 function Project(props) {
-  const myRef = useRef(null)
-  const executeScroll = () => scrollToRef(myRef)
 
   const [itemColor, setitemColor] = useState("black");
   const [projectDates, setprojectDates] = useState("");
@@ -50,7 +46,7 @@ function Project(props) {
           <div className="project-container-content-div">
             <div className="project-container-content-left">
               <div className="project-container-content-left-img">
-                <ImageCarousel Size={{width:"550px",height:"440px"}} projectId={props.project.title[0].text} projectimages={props.project.projectimages}/>
+                <ImageCarousel Size={{width:"550px",height:"440px"}} projectId={props.project.title[0].text+"image"} projectimages={props.project.projectimages}/>
               </div>
               <div className="project-container-content-left-content">
                 {
