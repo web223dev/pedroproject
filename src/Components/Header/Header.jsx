@@ -21,6 +21,7 @@ function Header(props) {
   const handleSetActive = () =>{
     setactiveState(true)
     setnameColor("blue");
+    // goToTop()
   }
   const handleSetInactive = () =>{
     setactiveState(false)
@@ -33,6 +34,7 @@ function Header(props) {
           to=""
           onSetActive={handleSetActive}
           onSetInactive={handleSetInactive}
+          onClick={goToTop}
         >
           <div
             className="name fb pointer"
