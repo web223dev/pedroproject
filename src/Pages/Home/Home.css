@@ -105,6 +105,7 @@
         grid-area: home-container;
         /* background-color: lightgray; */
         display: grid;
+        /* grid-template-columns: 100vw; */
         grid-template-columns: 100%;
         grid-template-rows: 20vh minmax(80vh, min-content);
         grid-template-areas: "header"

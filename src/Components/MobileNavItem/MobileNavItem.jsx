@@ -13,7 +13,10 @@ const MobileNavItem = (props) => {
       var localnavdes=""
       for(let i =0 ;i<120;i++)
       {
-        localnavdes+=props.project.navbardescription[0].text[i]
+        if(props.project.navbardescription[0].text[i]===undefined)
+          break;
+          
+          localnavdes+=props.project.navbardescription[0].text[i]
       }
       setnavDes((prevState)=>`${localnavdes}...`)
       return () => {};
