@@ -23,6 +23,9 @@ function NavItem(props) {
     var localnavdes=""
     for(let i =0 ;i<120;i++)
     {
+      if(props.project.navbardescription[0].text[i]===undefined)
+      break;
+      
       localnavdes+=props.project.navbardescription[0].text[i]
     }
     setnavDes((prevState)=>`${localnavdes}...`)

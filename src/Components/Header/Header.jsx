@@ -4,6 +4,7 @@ import "./Header.css";
 import { goToTop } from "react-update-url-on-scroll";
 // import { Link } from 'react-router-dom'
 import { Link } from "react-scroll";
+import { Link as RouteLink}  from "react-router-dom";
 var scroll = Scroll.animateScroll;
 
 function Header(props) {
@@ -11,13 +12,17 @@ function Header(props) {
   const [activeState, setactiveState] = useState(false);
 
   useEffect(() => {
+    if(window.scrollY===0)
+    setnameColor("black");
+    else
+    setnameColor("blue");
     // console.log(window.pageXOffset)
     // if (props.currentUrl === `/`) setnameColor("blue");
     // else setnameColor("black");
     return () => {
       // cleanup
     };
-  }, [props.currentUrl]);
+  }, [window.scrollY]);
   const handleSetActive = () =>{
     setactiveState(true)
     setnameColor("blue");
@@ -34,23 +39,22 @@ function Header(props) {
           to=""
           onSetActive={handleSetActive}
           onSetInactive={handleSetInactive}
-          onClick={goToTop}
+          onClick={()=>{
+            goToTop();
+          }}
         >
           <div
             className="name fb pointer"
             style={{ color: `${nameColor}` }}
-            onClickk={() => {
-              scroll.scrollToTop();
-            }}
           >
             Pedro Damasceno
           </div>
         </Link>
         {/* <div className="name fb pointer" onClick={goToTop} style={{color:`${nameColor}`}}>Pedro Damasceno</div> */}
         <div className="initiative">Initiative</div>
-        <Link to="/about">
+        <RouteLink to="/about">
           <div className="about">About</div>
-        </Link>
+        </RouteLink>
       </div>
     </div>
   );
