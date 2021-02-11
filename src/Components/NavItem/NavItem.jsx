@@ -44,7 +44,7 @@ function NavItem(props) {
   }
   return (
     // <ScrollableLink href={`/${props.project.title[0].text}`}>
-    <Link to={`${props.project.title[0].text}`} smooth={true}  hashSpy={true} spy={true} activeClass="active"
+    <Link to={`${props.project.title[0].text}`} smooth={true} offset={-90} hashSpy={true} spy={true} activeClass="active"
     onSetActive={handleSetActive}
     onSetInactive={handleSetInactive}>
       <div
