@@ -46,7 +46,6 @@
     font-family: Helvetica, Helvetica, Arial, sans-serif;
     padding-left: 20px;
     padding-top: 15px;
-
 }
 
 .about-left-nav-footer{
@@ -75,7 +74,7 @@ top: 20%;
         display: none;
     } 
     .about-content{
-        display: none;
+        /* display: none; */
     }
     .about-container{
         grid-area: about-container;
@@ -84,16 +83,23 @@ top: 20%;
         grid-template-columns: 100%;
         grid-template-rows: 150px 100fr;
         grid-template-areas: "about-header"
-                             "aboutMobileNav";
+        "about-content"
+                             /* "aboutMobileNav"; */
     }
-    .aboutMobileNav{
+    /* Removing padding left, and setting width 100% */ 
+    .aboutContentDiv{
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    /* .aboutMobileNav{
         grid-area: aboutMobileNav;
         height: 100%;
         width: 100%;
         position: absolute;
     }
     .aboutMobileNav{
-        display:block;
-    }   
+        display:none;
+    }    */
     
 }

@@ -7,7 +7,7 @@
 
 .mobile-project-container {
     display: grid;
-    padding-left: 4%;
+    /* padding-left: 4%; */
     padding-bottom: 3%;
     grid-template-columns: 60% 40%;
     font-family: Helvetica, Helvetica, Arial, sans-serif;
