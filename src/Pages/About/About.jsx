@@ -66,7 +66,7 @@ function About() {
 
         
         <div className="about-header">
-          <Header currentUrl={currentUrl} />
+          <Header currentUrl={currentUrl} aboutPageFlag={true}/>
         </div>
         <div className="about-left-nav">
           <div className="about-left-nav-items">

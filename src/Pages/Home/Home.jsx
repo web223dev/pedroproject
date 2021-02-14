@@ -96,7 +96,7 @@ function Home(props) {
         }
         </div>
 
-        <div className="mobile-nav-footer">
+        <div className="mobile-nav-footer bg-blue">
         {
               contactIGLink ?
                 <a className="bg-white" style={{flex:"1"}} href={contactIGLink.contactlink.url} target="_blank"><h1 className="pointer bg-white" style={{ color: "#8c8c8c",fontSize:"16px"}}>Contact me</h1></a>

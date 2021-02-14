@@ -4,7 +4,7 @@ import "./Header.css";
 import { goToTop } from "react-update-url-on-scroll";
 // import { Link } from 'react-router-dom'
 import { Link } from "react-scroll";
-import { Link as RouteLink}  from "react-router-dom";
+import { Link as RouteLink, withRouter}  from "react-router-dom";
 var scroll = Scroll.animateScroll;
 
 function Header(props) {
@@ -46,8 +46,20 @@ function Header(props) {
           <div
             className="name fb pointer"
             style={{ color: `${nameColor}` }}
+            onClick={() => {
+              props.history.push("/");
+            }}
           >
-            Pedro Damasceno
+            {
+              props.aboutPageFlag ?
+              <span>
+              <i className="f1-3 fas fa-arrow-left"></i> Pedro Damasceno
+              </span>
+              :
+              <span>
+              Pedro Damasceno
+              </span>
+            }
           </div>
         </Link>
         {/* <div className="name fb pointer" onClick={goToTop} style={{color:`${nameColor}`}}>Pedro Damasceno</div> */}
@@ -60,4 +72,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default withRouter(Header);
