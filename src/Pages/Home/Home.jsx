@@ -45,8 +45,10 @@ function Home(props) {
   useEffect(() => {
     // Fetching projects
     const fetchData = async () => {
+      // { orderings : '[my.projects.projectdates desc]' }
       client.query(
-        Prismic.Predicates.at('document.type', 'projects')
+        Prismic.Predicates.at('document.type', 'projects'),
+        { orderings : '[my.projects.projectdates]' }
       ).then(function (res) {
         setDocData((prevState) => res.results)
       });
