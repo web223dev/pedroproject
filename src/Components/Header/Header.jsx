@@ -62,8 +62,13 @@ function Header(props) {
             }
           </div>
         </Link>
-        {/* <div className="name fb pointer" onClick={goToTop} style={{color:`${nameColor}`}}>Pedro Damasceno</div> */}
-        <div className="initiative">Initiative</div>
+        {
+          props.aboutPageFlag ?
+          null
+          :
+          <div className="initiative">Initiative</div>
+
+        }
         <RouteLink to="/about">
           <div className="about">About</div>
         </RouteLink>
