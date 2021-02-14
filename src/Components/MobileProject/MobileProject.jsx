@@ -46,7 +46,7 @@ function MobileProject(props) {
           </div>
             <div className="mobile-project-container-content-left">
               <div className="mobile-project-container-content-left-img">
-                <ImageCarousel Size={{width:"310px",height:"300px"}} projectId={props.project.title[0].text} projectimages={props.project.projectimages}/>
+                <ImageCarousel Size={{width:"100%",height:"270px"}} projectId={props.project.title[0].text} projectimages={props.project.projectimages}/>
               </div>
               <div className="mobile-project-container-content-left-content">
                 {
