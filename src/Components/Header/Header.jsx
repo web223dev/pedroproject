@@ -53,7 +53,7 @@ function Header(props) {
             {
               props.aboutPageFlag ?
               <span>
-              <i className="f1-3 fas fa-arrow-left"></i> Pedro Damasceno
+              <i className="f1-3 fas fa-arrow-left" style={{color:"#8c8c8c"}}></i> Pedro Damasceno
               </span>
               :
               <span>
