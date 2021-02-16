@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./AboutLeftNav.css";
+import {withRouter} from 'react-router-dom'
 function AboutLeftNav(props) {
   const [projectDates, setprojectDates] = useState("");
   const [navDes, setnavDes] = useState("");
@@ -16,8 +17,12 @@ function AboutLeftNav(props) {
     setnavDes((prevState)=>`${localnavdes}...`)
     return () => {};
   }, []);
+  const navigate = (projectRoute) => {
+      // props.history.push(`/`)
+      window.location.href = `/#${projectRoute}`;
+  }
   return (
-    <div className="about-nav-item-container-wrapper flex-col pointer">
+    <div className="about-nav-item-container-wrapper flex-col pointer" onClick={(e)=>{navigate(props.project.title[0].text)}}>
       <h2 className="f1-5 about-item-heading">
         <span style={{ flex: "5" }}>{props.project.title[0].text}</span>
         <span style={{ flex: "1" }}>{projectDates}</span>
@@ -25,9 +30,8 @@ function AboutLeftNav(props) {
       <p className="about-item-para">
       {navDes}
       </p>
-      {/* <h2 className="item-date f1-5 fb">{props.project.projectdates}</h2> */}
     </div>
   );
 }
 
-export default AboutLeftNav;
+export default withRouter(AboutLeftNav);
