@@ -13,9 +13,9 @@ function Header(props) {
 
   useEffect(() => {
     if(window.scrollY===0)
-    setnameColor("black");
-    else
     setnameColor("blue");
+    else
+    setnameColor("black");
     // console.log(window.pageXOffset)
     // if (props.currentUrl === `/`) setnameColor("blue");
     // else setnameColor("black");

@@ -1,5 +1,5 @@
 .about-nav-item-container-wrapper{
-    color: #8c8c8c;
+    /* color: #8c8c8c; */
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: minmax(40px,min-content);
@@ -11,7 +11,7 @@
     font-feature-settings: "liga", "lnum";
 }
 .about-nav-item-container-wrapper:hover{
-    color: lightgrey;
+    /* color: lightgrey; */
 }
 .about-item-heading{
     display: flex;
