@@ -1,6 +1,6 @@
 .about-container-wrapper{
     display: grid;
-    grid-template-columns: minmax(0rem, 1fr) minmax(min-content, 1860px) minmax(0rem, 1fr);
+    grid-template-columns: minmax(0rem, 1fr) minmax(min-content, 1920px) minmax(0rem, 1fr);
     grid-template-rows: 100vh;
     /* grid-template-rows: minmax(100vh,min-content); */
     padding-left: 2rem;
@@ -10,21 +10,37 @@
 .about-container{
     grid-area: about-container;
     display: grid;
-    grid-template-columns: 25% 75%;
-    grid-template-rows: 150px 90vh;
+    grid-template-columns: 350px minmax(min-content,1570px);
+    /* grid-template-columns: 25% 75%; */
+    grid-template-rows: 150px minmax(80vh, min-content);
+    /* grid-template-rows: 150px 90vh; */
     grid-template-areas: "about-header about-header"
                          "about-left-nav about-content";
 }
 .about-header{
     grid-area: about-header;
+    width: 100%;
+    height: 100%;
     border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
 }
 .about-left-nav{
     grid-area: about-left-nav;
+    height: 100fr;
+    width: 350px;
     border-right: 1px solid black;
+    /* display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 95% 5%; */
+    position: fixed;
+    top: 150px;
+    bottom: 0;
+    left: 2rem;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 95% 5%;
+    grid-template-rows: 95fr 5fr;
 }
 .about-left-nav-items {
     overflow-y: auto;

@@ -25,7 +25,7 @@ function AboutLeftNav(props) {
     <div className="about-nav-item-container-wrapper flex-col pointer" onClick={(e)=>{navigate(props.project.title[0].text)}}>
       <h2 className="f1-5 about-item-heading">
         <span style={{ flex: "5" }}>{props.project.title[0].text}</span>
-        <span style={{ flex: "1" }}>{projectDates}</span>
+        <span className="item-date"style={{ flex: "1" }}>{projectDates}</span>
       </h2>
       <p className="about-item-para">
       {navDes}
