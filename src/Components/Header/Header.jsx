@@ -8,7 +8,10 @@ import { Link as RouteLink, withRouter}  from "react-router-dom";
 var scroll = Scroll.animateScroll;
 
 function Header(props) {
+  // for chaning name color 
+  const mediaMatch = window.matchMedia('(max-width: 850px)');
   const [nameColor, setnameColor] = useState("blue");
+
   const [activeState, setactiveState] = useState(false);
 
   useEffect(() => {
@@ -51,8 +54,13 @@ function Header(props) {
             }}
           >
             {
-              props.aboutPageFlag ?
+              props.aboutPageFlag && mediaMatch.matches?
               <span style={{color:"#8c8c8c", fontWeight:"400"}}>
+              <i className="f1-3 fas fa-arrow-left"></i> Pedro Damasceno
+              </span>
+              :
+              props.aboutPageFlag && !mediaMatch.matches ?
+              <span style={{color:"black", fontWeight:"400"}}>
               <i className="f1-3 fas fa-arrow-left"></i> Pedro Damasceno
               </span>
               :
