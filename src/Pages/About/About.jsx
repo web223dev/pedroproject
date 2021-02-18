@@ -25,7 +25,8 @@ function About() {
     // Fetching projects
     const fetchData = async () => {
       client
-        .query(Prismic.Predicates.at("document.type", "projects"))
+        .query(Prismic.Predicates.at("document.type", "projects"),
+        { orderings : '[my.projects.projectdates]' })
         .then(function (res) {
           setDocData((prevState) => res.results);
         });
@@ -33,8 +34,6 @@ function About() {
         .query(Prismic.Predicates.at("document.type", "about"))
         .then(function (res) {
           setAboutContent((prevState) => res.results[0].data)
-
-
           //   setDocData((prevState) => res.results[0].data.aboutdescription);
         });
 

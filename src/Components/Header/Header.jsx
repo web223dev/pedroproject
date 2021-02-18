@@ -60,8 +60,9 @@ function Header(props) {
               </span>
               :
               props.aboutPageFlag && !mediaMatch.matches ?
-              <span style={{color:"black", fontWeight:"400"}}>
-              <i className="f1-3 fas fa-arrow-left"></i> Pedro Damasceno
+              <span style={{color:"black", fontWeight:"700"}}>
+              Pedro Damasceno
+              {/* <i className="f1-3 fas fa-arrow-left"></i> Pedro Damasceno */}
               </span>
               :
               <span>
