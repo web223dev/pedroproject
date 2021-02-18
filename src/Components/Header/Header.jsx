@@ -73,7 +73,10 @@ function Header(props) {
         </Link>
         {
           props.aboutPageFlag ?
-          null
+            props.aboutPageFlag && mediaMatch.matches ?
+            null
+            :
+            <div className="initiative">Initiative</div>
           :
           <div className="initiative">Initiative</div>
 
