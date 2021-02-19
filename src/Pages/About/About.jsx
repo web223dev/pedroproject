@@ -84,17 +84,8 @@ function About() {
           </div>
 
           <div className="about-left-nav-footer">
-            {/* { */}
-                <a className="bg-white" style={{flex:"1"}} href='mailto:hi@pedrodamasceno.com' target="_blank"><h1 className="f1-5 pointer contactz" style={{ color: "#8c8c8c" }}>Contact me</h1></a>
-                {/* : */}
-                {/* null */}
-            {/* } */}
-            {/* { */}
-              {/* contactIGLink ? */}
-                <a className="bg-white flex-end" style={{flex:"1",paddingRight:"4.1rem"}} href='https://www.instagram.com/pedrose/' target="_blank"><h1 className="f1-5 pointer IGz" style={{ color: "#8c8c8c"}}>IG</h1></a>
-                {/* : */}
-                {/* null */}
-            {/* } */}
+                <a className="bg-white" style={{flex:"1"}} href='mailto:hi@pedrodamasceno.com' target="_blank"><h1 className="f1-5 pointer contactz" style={{ color: "#8c8c8c",fontSize:"16px" }}>Contact me</h1></a>
+                <a className="bg-white flex-end" style={{flex:"1",paddingRight:"2.5rem"}} href='https://www.instagram.com/pedrose/' target="_blank"><h1 className="f1-5 pointer IGz" style={{ color: "#8c8c8c",fontSize:"16px"}}>IG</h1></a>
           </div>
 
         </div>
