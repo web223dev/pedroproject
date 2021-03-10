@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./MobileProject.css";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
-import { Date } from 'prismic-reactjs'
+import { Date, RichText } from 'prismic-reactjs'
 
 function MobileProject(props) {
 	const [itemColor, setitemColor] = useState("black");
