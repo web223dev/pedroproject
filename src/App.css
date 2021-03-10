@@ -1,215 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,700;1,400&display=swap');
 * {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  text-decoration-style: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    text-decoration-style: none;
 }
 
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
+    font-family: Noto Sans, sans-serif;
+}
+
+a {
+    color: #0044ff;
+    text-decoration: underline;
 }
 
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
-.w100h100{
-  height: 100%;width: 100%;
+
+.w100h100 {
+    height: 100%;
+    width: 100%;
 }
+
 .flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex-end {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .flex-start {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .flex-col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
 }
 
 .flex-col-end {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-flow: column;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: column;
 }
 
 .flex-col-start {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-flow: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column;
 }
 
 .pointer {
-  cursor: pointer;
+    cursor: pointer;
 }
 
+
 /* FONT SIZE AND WEIGHT*/
+
 .f1 {
-  font-size: 1rem;
+    font-size: 1rem;
 }
-.f1-2{
-  font-size: 1.2rem;
+
+.f1-2 {
+    font-size: 1.2rem;
 }
-.f1-3{
-  font-size: 1.3rem;
+
+.f1-3 {
+    font-size: 1.3rem;
 }
+
 .f1-5 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .f2 {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 .f3 {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
 .f4 {
-  font-size: 4rem;
+    font-size: 4rem;
 }
 
 .f5 {
-  font-size: 5rem;
+    font-size: 5rem;
 }
 
 .f6 {
-  font-size: 6rem;
+    font-size: 6rem;
 }
 
 .fb {
-  font-weight: bolder;
+    font-weight: bolder;
 }
 
 .fbb {
-  font-weight: 900;
+    font-weight: 900;
 }
 
 .fl {
-  font-weight: lighter;
+    font-weight: lighter;
 }
 
 .fll {
-  font-weight: 100;
+    font-weight: 100;
 }
 
+
 /* BACKGROUND AND FOREGROUND COLORS */
+
 .red {
-  color: red;
+    color: red;
 }
 
 .black {
-  color: black;
+    color: black;
 }
 
 .white {
-  color: white;
+    color: white;
 }
 
 .blue {
-  color: blue;
+    color: blue;
 }
-.mute-txt{
-  color: lightgray;
+
+.mute-txt {
+    color: lightgray;
 }
+
 .bg-dark {
-  background-color: black;
+    background-color: black;
 }
 
 .bg-white {
-  background-color: white;
+    background-color: white;
 }
 
 .bg-smoke {
-  background-color: whitesmoke;
+    background-color: whitesmoke;
 }
 
 .bg-gray {
-  background-color: lightgray;
+    background-color: lightgray;
 }
 
 .bg-blue {
-  background-color: blue;
+    background-color: blue;
 }
 
 .bg-silver {
-  background-color: silver;
+    background-color: silver;
 }
-
 
 
 /* Responsiveness */
+
 @media screen and (max-width: 420px) {
-  html {
-    font-size: 22.5%;
-  }
+    html {
+        font-size: 22.5%;
+    }
 }
+
 @media screen and (max-width: 450px) {
-  html {
-    font-size: 32.5%;
-  }
+    html {
+        font-size: 32.5%;
+    }
 }
 
 @media screen and (max-width: 1000px) {
-  html {
-    font-size: 42.5%;
-  }
+    html {
+        font-size: 42.5%;
+    }
 }
 
 @media screen and (max-width: 1200px) {
-  html {
-    font-size: 52.5%;
-  }
+    html {
+        font-size: 52.5%;
+    }
 }
 
 @media screen and (max-width: 1400px) {
-  html {
-    font-size: 62.5%;
-  }
+    html {
+        font-size: 62.5%;
+    }
 }
 
 @media screen and (min-width: 1500px) {
-  html {
-    font-size: 70%;
-  }
+    html {
+        font-size: 70%;
+    }
 }
 
 @media screen and (min-width: 1600px) {
-  html {
-    font-size: 75%;
-  }
+    html {
+        font-size: 75%;
+    }
 }
 
 @media screen and (min-width: 1700px) {
-  html {
-    font-size: 80%;
-  }
+    html {
+        font-size: 80%;
+    }
 }
 
 @media screen and (min-width: 1800px) {
-  html {
-    font-size: 90%;
-  }
+    html {
+        font-size: 90%;
+    }
 }
 
 @media screen and (min-width: 1900px) {
-  html {
-    font-size: 95%;
-  }
+    html {
+        font-size: 95%;
+    }
 }
