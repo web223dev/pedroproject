@@ -5,16 +5,13 @@ import NavItem from "../../Components/NavItem/NavItem";
 import Project from "../../Components/Project/Project";
 
 import Prismic from '@prismicio/client'
-import { Date, Link, RichText } from 'prismic-reactjs'
 import MobileNavItem from "../../Components/MobileNavItem/MobileNavItem";
 
 const apiEndpoint = 'https://portfolio-pedro.cdn.prismic.io/api/v2'
 const accessToken = 'MC5ZQWM0NWhNQUFDWUFyN1RG.77-9O--_ve-_ve-_ve-_ve-_ve-_vQ3vv73vv73vv73vv73vv71Y77-9Be-_vSEBMe-_vU_vv73vv73vv71-bu-_ve-_ve-_vQQ'
-const client = Prismic.client(apiEndpoint, { accessToken })
-
+const client = Prismic.client(apiEndpoint, { accessToken }); 
 
 function Home(props) {
-  // console.log(window.location.hash)
   const [currentUrl, setcurrentUrl] = useState('/')
   const [contactIGLink, setcontactIGLink] = useState(null);
 
@@ -40,20 +37,20 @@ function Home(props) {
   }, [window.location.hash])
 
   // Fetching data from prismic
-  const [doc, setDocData] = useState(null)
+  const [doc, setDocData] = useState([]); 
 
   useEffect(() => {
     // Fetching projects
     const fetchData = async () => {
-      // { orderings : '[my.projects.projectdates desc]' }
-      client.query(
+      await client.query(
         Prismic.Predicates.at('document.type', 'projects'),
+        // Sort DocData in ascending order based on projectDate
         { orderings : '[my.projects.projectdates]' }
       ).then(function (res) {
-        setDocData((prevState) => res.results)
+        setDocData((prevState) => res.results);
       });
-    }
-    fetchData()
+    }; 
+    fetchData();
 
     // Fetching contact link
     const fetchContactLink = async () => {
@@ -62,15 +59,15 @@ function Home(props) {
       ).then(function (res) {
         setcontactIGLink((prevState) => res.results[0].data)
       });
-    }
-    fetchContactLink()
+    };
+    fetchContactLink();
   }, [])
 
   const listenScrollEvent = () => {
     const withoutHash = window.location.hash.replaceAll("#","")
     setcurrentUrl((prevState) => withoutHash.replaceAll("%20"," "))
   }
-  
+
   return (
     <div className="home-wrapper-container">
       <div className="home-container">
@@ -85,9 +82,9 @@ function Home(props) {
         {
           
           doc ?
-          doc.map((project, index) => {
+          doc.map((project) => {
             return (
-              <MobileNavItem project={project.data} />
+              <MobileNavItem project={project.data} key={project.id} />
             )
           })
           :
@@ -116,9 +113,9 @@ function Home(props) {
           <div className="left-nav-items">
             {
               doc ?
-                doc.map((project, index) => {
+              doc.map((project) => {
                   return (
-                    <NavItem currentUrl={currentUrl} projectName={"Project1"} project={project.data} />
+                    <NavItem currentUrl={currentUrl} projectName={"Project1"} project={project.data} key={project.id} />
                   )
                 })
                 :
@@ -143,9 +140,9 @@ function Home(props) {
         <div className="projectsContent" >
           {
             doc ?
-              doc.map((project, index) => {
+            doc.map((project) => {
                 return (
-                  <Project key={index} currentUrl={currentUrl}  project={project.data} />
+                  <Project key={project.id} currentUrl={currentUrl}  project={project.data} />
                 )
               })
               :

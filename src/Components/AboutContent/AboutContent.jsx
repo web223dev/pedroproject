@@ -24,7 +24,7 @@ const AboutContent = (props) => {
         <div >
             {
                 paragraph.map(element => {
-                    // console.log()
+                    console.log(element);
                     return (
                         <p>{element.text}</p>
                     )
