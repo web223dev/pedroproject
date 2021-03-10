@@ -65,10 +65,11 @@ function Project(props) {
 												para.spans.length === 0 ?
 													para.text :
 													para.spans.map(span => {
+														console.log(span);
 														const subString = para.text.slice(span.start, span.end);
 														if (span.type === 'hyperlink') {
 															return reactStringReplace(para.text, subString, (match, i) => (
-																<a key={match + i} href={span.data.url}>{subString}</a>
+																<a key={match + i} href={span.data.url} target="_blank">{subString}</a>
 															));
 														} else if (span.type === 'strong') {
 															return reactStringReplace(para.text, subString, (match, i) => (
