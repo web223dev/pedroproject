@@ -39,7 +39,7 @@ function Home(props) {
 			await client.query(
 				Prismic.Predicates.at('document.type', 'projects'),
 				// Sort DocData in ascending order based on projectDate
-				{ orderings: '[my.projects.projectdates]' }
+				{ orderings: '[my.projects.projectdates desc]' }
 			).then(function (res) {
 				setDocData((prevState) => res.results);
 			});

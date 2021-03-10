@@ -1,7 +1,6 @@
 import React from "react";
 
 function ImageCarousel(props) {
-	console.log(props);
 	return (
 		// <ScrollableSection name={props.projectId}>
 		<div
