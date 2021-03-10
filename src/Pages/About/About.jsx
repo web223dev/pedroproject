@@ -25,13 +25,14 @@ function About() {
 		const fetchData = async () => {
 			client
 				.query(Prismic.Predicates.at("document.type", "projects"),
-					{ orderings: '[my.projects.projectdates]' })
+					{ orderings: '[my.projects.projectdates desc]' })
 				.then(function (res) {
 					setDocData((prevState) => res.results);
 				});
 			client
 				.query(Prismic.Predicates.at("document.type", "about"))
 				.then(function (res) {
+					console.log(res.results[0]);
 					setAboutContent((prevState) => res.results[0].data)
 				});
 		};
@@ -52,25 +53,23 @@ function About() {
 	return (
 		<div className="about-container-wrapper">
 			<div className="about-container">
-
-
 				<div className="about-header">
 					<Header currentUrl={currentUrl} aboutPageFlag={true} />
 				</div>
 				<div className="about-left-nav">
 					<div className="about-left-nav-items">
-						{doc
-							? doc.map((project, index) => {
+						{
+							doc && doc.map((project) => {
 								return (
 									<AboutLeftNav
 										currentUrl={currentUrl}
 										projectName={"Project1"}
 										project={project.data}
-										key={index}
+										key={project.id}
 									/>
 								);
 							})
-							: null}
+						}
 					</div>
 
 					<div className="about-left-nav-footer">
@@ -92,9 +91,9 @@ function About() {
 
 				<div className="aboutMobileNav">
 					{doc ?
-						doc.map((project, index) => {
+						doc.map((project) => {
 							return (
-								<MobileNavItem project={project.data} />
+								<MobileNavItem project={project.data} key={project.id} />
 							)
 						})
 						:
