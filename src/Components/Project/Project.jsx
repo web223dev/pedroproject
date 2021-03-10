@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Project.css";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
-import { Date } from "prismic-reactjs";
-import reactStringReplace from 'react-string-replace';
+import { Date, RichText } from "prismic-reactjs";
 
 function Project(props) {
 	const [itemColor, setitemColor] = useState("black");
@@ -54,33 +53,7 @@ function Project(props) {
 						<div className="project-container-content-left-content">
 							{
 								// Apply edited bold string, hyperlink in prismic editor to the site.
-								props.project.description.map((para, index) => {
-									return (
-										<p
-											style={{ fontWeight: "400" }}
-											key={index}
-											className={para.type}
-										>
-											{
-												para.spans.length === 0 ?
-													para.text :
-													para.spans.map(span => {
-														console.log(span);
-														const subString = para.text.slice(span.start, span.end);
-														if (span.type === 'hyperlink') {
-															return reactStringReplace(para.text, subString, (match, i) => (
-																<a key={match + i} href={span.data.url} target="_blank">{subString}</a>
-															));
-														} else if (span.type === 'strong') {
-															return reactStringReplace(para.text, subString, (match, i) => (
-																<strong key={match + i}>{subString}</strong>
-															));
-														}
-													})
-											}
-										</p>
-									)
-								})
+								RichText.render(props.project.description)
 							}
 						</div>
 					</div>
