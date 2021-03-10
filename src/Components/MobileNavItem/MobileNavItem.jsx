@@ -9,7 +9,7 @@ const MobileNavItem = (props) => {
     useEffect(() => {
       // Setting date
       var d = new Date(props.project.timestamp);
-      setprojectDates((prevState) => d.getMonth() + 1 + "." + d.getFullYear());
+      setprojectDates(() => d.getMonth() + 1 + "." + d.getFullYear());
       var localnavdes=""
       for(let i =0 ;i<120;i++)
       {
@@ -18,7 +18,7 @@ const MobileNavItem = (props) => {
           
           localnavdes+=props.project.navbardescription[0].text[i]
       }
-      setnavDes((prevState)=>`${localnavdes}...`)
+      setnavDes(()=>`${localnavdes}...`)
       return () => {};
     }, []);
     const handleRedirection = (route) =>{

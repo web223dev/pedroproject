@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import Project from '../../Components/Project/Project'
 import ProjectPageHeader from '../../Components/ProjectPageHeader/ProjectPageHeader'
 import './SingleProject.css'
 // import ProjectPageHeader from "../../Components/ProjectPageHeader/ProjectPageHeader"
 import Prismic from '@prismicio/client'
-import { Date, Link, RichText } from 'prismic-reactjs'
-import MobileNavItem from "../../Components/MobileNavItem/MobileNavItem";
 import MobileProject from "../../Components/MobileProject/MobileProject"
 
 const apiEndpoint = 'https://portfolio-pedro.cdn.prismic.io/api/v2'
@@ -13,7 +10,6 @@ const accessToken = 'MC5ZQWM0NWhNQUFDWUFyN1RG.77-9O--_ve-_ve-_ve-_ve-_ve-_vQ3vv7
 const client = Prismic.client(apiEndpoint, { accessToken })
 
 function SingleProject(props) {
-    const [currentUrl, setcurrentUrl] = useState('/')
     // Fetching data from prismic
     const [doc, setDocData] = useState(null)
     useEffect(() => {
@@ -42,11 +38,7 @@ function SingleProject(props) {
             </div>
             <div className="singleproject-Content">
                 {
-                    doc ? 
-                    <MobileProject project={doc.data} />
-                    
-                    :
-                    null
+                    doc && <MobileProject project={doc.data} />
                 }
             </div>
 

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import "./AboutContent.css"
-var paragraphArr = [];
 const AboutContent = (props) => {
 
     const [paragraph, setParagraph] = useState([]);
@@ -8,15 +7,7 @@ const AboutContent = (props) => {
 
     useEffect(() => {
         var paragraphArr = props.aboutContent.aboutdescription;
-
-        var link1 = props.aboutContent.link1;
-        var link2 = props.aboutContent.link2;
-        var link3 = props.aboutContent.link3;
-
         setParagraph(paragraphArr)
-        return () => {
-            // console.log("CMD")
-        }
     }, [])
 
 

@@ -5,7 +5,6 @@ import { goToTop } from "react-update-url-on-scroll";
 // import { Link } from 'react-router-dom'
 import { Link } from "react-scroll";
 import { Link as RouteLink, withRouter}  from "react-router-dom";
-var scroll = Scroll.animateScroll;
 
 function Header(props) {
   // for chaning name color 
@@ -16,15 +15,9 @@ function Header(props) {
 
   useEffect(() => {
     if(window.scrollY===0)
-    setnameColor("blue");
+      setnameColor("blue");
     else
-    setnameColor("black");
-    // console.log(window.pageXOffset)
-    // if (props.currentUrl === `/`) setnameColor("blue");
-    // else setnameColor("black");
-    return () => {
-      // cleanup
-    };
+      setnameColor("black");
   }, [window.scrollY]);
   const handleSetActive = () =>{
     setactiveState(true)

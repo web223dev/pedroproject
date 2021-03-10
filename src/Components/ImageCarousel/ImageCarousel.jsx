@@ -1,6 +1,4 @@
 import React from "react";
-import sstatic from "./Assets/sstatic.PNG";
-import ScrollableSection, { ScrollableLink } from "react-update-url-on-scroll";
 
 function ImageCarousel(props) {
   return (
