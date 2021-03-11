@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "./Project.css";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
 import { Date, RichText } from "prismic-reactjs";
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
+import "./Project.css";
 
 function Project(props) {
 	const [itemColor, setitemColor] = useState("black");
@@ -42,13 +44,25 @@ function Project(props) {
 				<div className="project-container-content-div">
 					<div className="project-container-content-left">
 						<div className="project-container-content-left-img">
-							<ImageCarousel
-								Size={{ width: "550px", height: "440px" }}
-								projectId={
-									props.project.title[0].text + "image"
-								}
-								projectimages={props.project.projectimages}
-							/>
+							{
+								props.project.projectimages.url === props.project.projectimages.second.url && props.project.projectimages.url === props.project.projectimages.third.url ?
+
+								<ImageCarousel
+									Size={{ width: "550px", height: "440px" }}
+									projectId={
+										props.project.title[0].text + "image"
+									}
+									projectimages={props.project.projectimages}
+								/> :
+								<AwesomeSlider 
+									organicArrows={false}
+									bullets={false}
+								>
+									<img data-src={props.project.projectimages.url} />
+									<img data-src={props.project.projectimages.second.url} />
+									<img data-src={props.project.projectimages.third.url} />
+								</AwesomeSlider>
+							}
 						</div>
 						<div className="project-container-content-left-content">
 							{

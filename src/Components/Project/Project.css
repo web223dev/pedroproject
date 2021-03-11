@@ -12,8 +12,7 @@
     grid-template-columns: 70% 30%;
     font-family: Helvetica, Helvetica, Arial, sans-serif;
     grid-template-rows: 10vh minmax(60vh, min-content);
-    grid-template-areas: "project-container-headings project-container-headings"
-        "project-container-content-left .";
+    grid-template-areas: "project-container-headings project-container-headings" "project-container-content-left .";
 }
 
 .project-container-headings {
@@ -23,13 +22,13 @@
     z-index: 3;
     display: flex;
     align-items: flex-start;
-    box-sizing:border-box;
+    box-sizing: border-box;
     padding-top: 8px;
 }
 
 .project-heading {
     flex: 2;
-    font-family :Helvetica, Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Helvetica, Arial, sans-serif;
     line-height: 23px;
     font-size: 16px;
     font-weight: 700;
@@ -48,7 +47,7 @@
     grid-area: project-container-content-left;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: minmax(20vh,min-content) minmax(40vh, min-content);
+    grid-template-rows: minmax(20vh, min-content) minmax(40vh, min-content);
 }
 
 .project-container-content-left-img {
@@ -62,7 +61,7 @@
     padding-top: 2rem;
     text-align: left;
     position: relative;
-    font-family :Helvetica, Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 23px;
@@ -82,10 +81,29 @@
 
 .is-pinned {
     color: red;
-  }
+}
+
+.awssld {
+    --slider-height-percentage: 60%;
+    --slider-transition-duration: 200ms;
+    --organic-arrow-thickness: 20px;
+    --organic-arrow-border-radius: 30px;
+    --organic-arrow-height: 40px;
+    --organic-arrow-color: #26456f;
+    --control-button-width: 40%;
+    --control-button-height: 80%;
+    --control-button-background: transparent;
+    --control-bullet-color: #fafafa;
+    --control-bullet-active-color: #d5d5d5;
+    --loader-bar-color: transparent;
+    --loader-bar-height: 1px;
+}
+
+
 /* Responsiveness */
+
 @media screen and (max-width: 1920px) {
-    .project-container-content-div{
+    .project-container-content-div {
         width: 550px;
     }
 }
