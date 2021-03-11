@@ -47,21 +47,21 @@ function Project(props) {
 							{
 								props.project.projectimages.url === props.project.projectimages.second.url && props.project.projectimages.url === props.project.projectimages.third.url ?
 
-								<ImageCarousel
-									Size={{ width: "550px", height: "440px" }}
-									projectId={
-										props.project.title[0].text + "image"
-									}
-									projectimages={props.project.projectimages}
-								/> :
-								<AwesomeSlider 
-									organicArrows={false}
-									bullets={false}
-								>
-									<img data-src={props.project.projectimages.url} />
-									<img data-src={props.project.projectimages.second.url} />
-									<img data-src={props.project.projectimages.third.url} />
-								</AwesomeSlider>
+									<ImageCarousel
+										Size={{ width: "550px", height: "440px" }}
+										projectId={
+											props.project.title[0].text + "image"
+										}
+										projectimages={props.project.projectimages}
+									/> :
+									<AwesomeSlider
+										organicArrows={false}
+										bullets={false}
+									>
+										<img data-src={props.project.projectimages.url} />
+										<img data-src={props.project.projectimages.second.url} />
+										<img data-src={props.project.projectimages.third.url} />
+									</AwesomeSlider>
 							}
 						</div>
 						<div className="project-container-content-left-content">

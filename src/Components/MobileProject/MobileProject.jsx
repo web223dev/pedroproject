@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "./MobileProject.css";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
 import { Date, RichText } from 'prismic-reactjs'
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
+import "./MobileProject.css";
 
 function MobileProject(props) {
 	const [itemColor, setitemColor] = useState("black");
@@ -31,7 +33,18 @@ function MobileProject(props) {
 				</div>
 				<div className="mobile-project-container-content-left">
 					<div className="mobile-project-container-content-left-img">
-						<ImageCarousel Size={{ width: "100%", height: "270px" }} projectId={props.project.title[0].text} projectimages={props.project.projectimages} />
+						{
+							props.project.projectimages.url === props.project.projectimages.second.url && props.project.projectimages.url === props.project.projectimages.third.url ?
+								<ImageCarousel Size={{ width: "100%", height: "270px" }} projectId={props.project.title[0].text} projectimages={props.project.projectimages} /> :
+								<AwesomeSlider
+									organicArrows={false}
+									bullets={false}
+								>
+									<img data-src={props.project.projectimages.url} />
+									<img data-src={props.project.projectimages.second.url} />
+									<img data-src={props.project.projectimages.third.url} />
+								</AwesomeSlider>
+						}
 					</div>
 					<div className="mobile-project-container-content-left-content">
 						{
