@@ -66,7 +66,7 @@ function Home(props) {
 		<div className="home-wrapper-container">
 			<div className="home-container">
 
-				<div className="header" style={{ zIndex: "2" }}>
+				<div className="header" style={{ zIndex: "3" }}>
 					<Header currentUrl={currentUrl} />
 				</div>
 
