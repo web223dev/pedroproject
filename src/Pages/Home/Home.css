@@ -13,11 +13,10 @@
     grid-area: home-container;
     /* background-color: lightgray; */
     display: grid;
-    grid-template-columns: 350px minmax(min-content,1570px);
+    grid-template-columns: 350px minmax(min-content, 1570px);
     /* grid-template-columns: 30% 70fr; */
     grid-template-rows: 150px minmax(85vh, min-content);
-    grid-template-areas: "header header"
-        "left-nav projectsContent";
+    grid-template-areas: "header header" "left-nav projectsContent";
 }
 
 .header {
@@ -71,7 +70,6 @@
     background-color: aqua;
     font-family: Helvetica, Helvetica, Arial, sans-serif;
     font-size: 16px;
-
     /* position: relative; */
 }
 
@@ -80,14 +78,17 @@
     /* background-color: brown; */
 }
 
-.mobileNav{
+.mobileNav {
     display: none;
 }
 
-
+.mobile-nav-footer a {
+    text-decoration: none;
+}
 
 
 /* Responsivenss */
+
 @media screen and (max-width: 850px) {
     /* .home-container {
         grid-area: home-container;
@@ -105,28 +106,26 @@
         /* grid-template-columns: 100vw; */
         grid-template-columns: 100%;
         grid-template-rows: 20vh minmax(80vh, min-content);
-        grid-template-areas: "header"
-            "mobileView";
+        grid-template-areas: "header" "mobileView";
     }
-    
     .left-nav {
         grid-area: left-nav;
         display: none;
     }
-    .projectsContent{
+    .projectsContent {
         display: none;
-    } 
-    .mobileNav{
+    }
+    .mobileNav {
         /* position: absolute; */
         grid-area: mobileView;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 95fr 5fr;
     }
-    .mobile-nav-items{
+    .mobile-nav-items {
         /* background-color: cadetblue; */
     }
-    .mobile-nav-footer{
+    .mobile-nav-footer {
         display: flex;
         border-top: 1px solid black;
         box-sizing: border-box;
@@ -137,7 +136,7 @@
         line-height: 23px;
         background-color: white;
         font-family: Helvetica, Helvetica, Arial, sans-serif;
-        font-size: 16px;   
+        font-size: 16px;
         position: fixed;
         bottom: 0;
         right: 2rem;

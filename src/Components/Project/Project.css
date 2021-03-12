@@ -84,6 +84,8 @@
 }
 
 .awssld {
+    width: 550px;
+    height: 440px;
     --slider-height-percentage: 60%;
     --slider-transition-duration: 200ms;
     --organic-arrow-thickness: 20px;
